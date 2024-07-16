@@ -1,6 +1,79 @@
-@media screen and (max-width: 991px) {
+@media only screen and (max-width: 480px) {
     html {
-        font-size: 0.44rem;
+        font-size: 0.25rem;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav {
+        padding: 0%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .sliderbox {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clientlogo img {
+
+        height: 60px;
+        width: 60px;
+    }
+
+    .managebox .section1 {
+        gap: 50px;
+    }
+
+    .comanbox {
+        /* display: block; */
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .helpbox {
+        justify-content: flex-start;
+    }
+
+    .comanbox .sectionimg {
+        width: 100%;
+    }
+
+    .comanbox .sectioncontent {
+        width: 100%;
+    }
+
+    .timbox {
+        flex-direction: column;
+    }
+
+    .timbox .section1 {
+        /* flex-direction: column; */
+        width: 100%;
+    }
+
+    .timbox .section2 {
+        width: 100%;
+    }
+
+    .markatingbox p {
+        width: 85%;
+    }
+
+    .showhelpbox {
+        gap: 3rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    html {
+                font-size: 0.25rem;
     }
 
     .menu {
@@ -17,3 +90,42 @@
 
 
 }
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    html {
+        font-size: 0.35rem;
+    }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    html {
+        font-size: 0.45rem;
+    }
+
+    .markatingbox p {
+        width: 70%;
+    }
+
+    .markatingbox .section2 {
+        justify-content: space-between;
+    }
+
+    .markatingbox .section2 .boxitem {
+        max-width: 280px;
+        max-height: 250px;
+    }
+
+    .markatingbox .section2 .boxinneritem {
+        max-width: 250px;
+        max-height: 160px;
+        left: 5%;
+    }
+
+    .comanbox {
+        justify-content: space-evenly;
+    }
+
+}
+
+/* Large Desktops (min-width: 1201px) */
+@media only screen and (min-width: 1201px) {}

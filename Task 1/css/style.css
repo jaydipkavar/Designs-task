@@ -5,10 +5,12 @@
     font-family: inter;
     font-size: 10px;
 }
+
 ::selection {
     color: white;
     background: #66BB69;
 }
+
 /* navbar css */
 nav {
     width: 100%;
@@ -17,18 +19,19 @@ nav {
     align-items: center;
     padding: 25px;
     position: sticky;
-        top: 0;
+    top: 0;
 }
+
 .logo {
     margin-left: 10%;
-    width: 30%;
+    width: 3rem;
 }
 
 button {
-    font-size: 15px;
+    font-size: 1.5rem;
     background-color: #4CAF4F;
     width: auto;
-        height: auto;
+    height: auto;
     padding: 1.5rem 3rem;
     gap: 5.57px;
     border-radius: 5px;
@@ -51,9 +54,10 @@ nav ul {
 
 nav ul li {
     list-style: none;
-font-weight: 700;
+    font-weight: 700;
     padding: 10px;
     color: #4D4D4D;
+    font-size: 1.6rem;
 }
 
 nav ul li:hover {
@@ -73,6 +77,7 @@ nav ul button:hover {
 nav ul button:active {
     background-color: #237D31;
 }
+
 /* slider css */
 .sliderbox {
     background-color: #F5F7FA;
@@ -81,7 +86,7 @@ nav ul button:active {
     align-items: center;
     justify-content: center;
     padding: 7rem;
-        gap: 20rem;
+    gap: 20rem;
 }
 
 
@@ -105,9 +110,9 @@ nav ul button:active {
 .slidecontent button:active {
     background-color: #237D31;
 }
-            
+
 .slideimg img {
-max-height: 500px;
+    max-height: 500px;
     height: 50rem;
 }
 
@@ -143,7 +148,7 @@ max-height: 500px;
 .clientbox .content p {
     color: #717171;
     font-size: 2rem;
-        margin-top: 1.5rem
+    margin-top: 1.5rem
 }
 
 .clientlogo {
@@ -151,10 +156,15 @@ max-height: 500px;
     justify-content: space-evenly;
     align-items: center;
     padding: 5rem;
+        flex-wrap: wrap;
+            gap: 1rem;
 }
+
 .clientlogo img {
     transition: ease-in-out 0.3s;
     padding: 1rem;
+    height: 100px;
+        width: 100px;
 }
 
 .clientlogo img:hover {
@@ -189,14 +199,16 @@ max-height: 500px;
 .managebox .content p {
     color: #717171;
     font-size: 2rem;
-        margin-top: 1.5rem
+    margin-top: 1.5rem
 }
 
 .managebox .section1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 50px;
+        flex-wrap: wrap;
+        gap: 50px;
 }
 
 .managebox .maninnerbox {
@@ -206,11 +218,13 @@ max-height: 500px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 6rem;
-    width: 25%;
+    width: 400px;
     border-radius: 10px;
     box-shadow: 1px 5px 12px 1px rgba(128, 128, 128, 0.08)
 }
+
 .managebox .maninnerbox:hover {
     background: #4CAF4F;
     margin-top: -35px;
@@ -218,6 +232,7 @@ max-height: 500px;
     transition: ease-in-out 0.5s;
     box-shadow: 0px 14px 15px -6px rgba(144, 144, 144, 1)
 }
+
 .maninnerbox img {
     height: 80px;
     margin-bottom: 30px;
@@ -234,13 +249,14 @@ max-height: 500px;
 .maninnerbox p {
     color: #717171;
     font-size: 1.8rem;
-        margin-top: 1.5rem
+    margin-top: 1.5rem
 }
 
 .managebox .maninnerbox:hover p,
 .managebox .maninnerbox p:hover {
     color: white;
 }
+
 /* comanbox css */
 .comanbox {
     width: 100%;
@@ -248,6 +264,7 @@ max-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
 
 }
@@ -261,14 +278,15 @@ max-height: 500px;
 }
 
 .comanbox .sectionimg img {
-    height: 600px;
-    width: 600px;
+    height: 60rem;
+        width: auto;
 }
 
 .comanbox .sectioncontent {
     width: 40%;
 
 }
+
 .comanbox .sectioncontent button:hover {
     background-color: #388E3B;
 }
@@ -276,6 +294,7 @@ max-height: 500px;
 .comanbox .sectioncontent button:active {
     background-color: #237D31;
 }
+
 .comanbox .sectioncontent h1 {
     color: #4D4D4D;
     font-size: 4rem;
@@ -284,19 +303,21 @@ max-height: 500px;
 .comanbox .sectioncontent p {
     color: #717171;
     font-size: 1.8rem;
-        margin-top: 2rem
+    margin-top: 2rem
 }
 
 .comanbox .sectioncontent button {
 
     margin-top: 2rem
 }
+
 /* ///help css*/
 .helpbox {
     padding: 6rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+        flex-wrap: wrap;
     background-color: #F5F7FA;
 }
 
@@ -312,7 +333,7 @@ max-height: 500px;
 .helpbox .content p {
     color: #717171;
     font-size: 1.8rem;
-        margin-top: 1.5rem
+    margin-top: 1.5rem
 }
 
 
@@ -320,7 +341,7 @@ max-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 7rem;
 }
 
 .showhelpbox p {
@@ -356,63 +377,84 @@ max-height: 500px;
     background-color: #F5F7FA;
     display: flex;
     justify-content: center;
-
+    width: 100%;
     padding: 6rem;
+    flex-wrap: wrap;
+        /* Allow flex items to wrap */
 }
 
 .timbox .section1 {
     width: 40%;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+    }
 
 
-}
 
 .timbox .section1 img {
-    height: 500px;
-    width: 500px;
-    
+height: 50rem;
+    max-width: 450px;
+    max-height: 450px;
+    object-fit: cover;
+    width: 50rem;
 }
-
-
 .timbox .section2 {
-    width: 50%;
+    width: 60%;
+        padding-left: 2rem;
+    
+        display: flex;
+        flex-direction: column;
 }
 
 .timbox .section2 p {
     color: #89939E;
     font-size: 1.8rem;
     margin-top: 15px;
+    line-height: 2.5rem;
+    
+        /* Adjust line height */
 }
 
 .timbox .section2 h6 {
     color: #717171;
     font-size: 1.8rem;
-        line-height: 4rem;
-
+    line-height: 3rem;
+        width: 85%;
+        /* Adjust line height */
 }
 
 .timbox .section2 .timtitle {
     color: #4CAF4F;
     font-size: 2.3rem;
-        margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .timclientlogo {
     margin-top: 4rem;
     display: flex;
-    width: 90%;
-    align-items: center;
-    justify-content: space-between;
+    width: 100%;
+    
+        flex-wrap: wrap;
+        align-items: center
+    }
+    
+    .timclientlogo img {
+        height: 7rem;
+        margin-right: 3rem;
 }
 
 .timclientlogo h2 {
     color: #4CAF4F;
-text-align: center;
+    text-align: center;
+    font-size: 2rem;
+        margin-top: 1rem;
+        /* Adjust spacing */
 }
 
 .timclientlogo h2 i {
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
         margin-left: 1rem;
         font-size: 2rem;
     font-weight: 900;
@@ -423,7 +465,7 @@ text-align: center;
 .markatingbox {
     width: 100%;
     padding: 6rem;
-    height: 90vh;
+
 
 }
 
@@ -438,14 +480,14 @@ text-align: center;
 
 .markatingbox h1 {
     color: #4D4D4D;
-    font-size: 40px;
+    font-size: 4rem;
 
 }
 
 .markatingbox p {
     color: #717171;
     font-size: 1.8rem;
-        margin-top: 1.5rem;
+    margin-top: 1.5rem;
     width: 40%;
     text-align: center;
     line-height: 2.5rem;
@@ -457,21 +499,24 @@ text-align: center;
     justify-content: space-evenly;
     align-items: center;
     padding: 2rem;
+    margin-bottom: 50px;
+        flex-wrap: wrap;
+        gap: 10rem;
 
 }
 
 .markatingbox .section2 .boxitem {
-    height: 350px;
-    width: 450px;
+    height: 35rem;
+        width: 45rem;
     border-radius: 10px;
     position: relative;
 }
 
 
 .markatingbox .section2 .boxinneritem {
-    height: 200px;
-    width: 330px;
-    padding: 25px;
+    height: 20rem;
+        width: 33rem;
+        padding: 2.5rem;
     border-radius: 10px;
     overflow: hidden;
     position: absolute;
@@ -481,6 +526,7 @@ text-align: center;
     background-color: #F5F7FA;
     box-shadow: -1px 7px 14px 0px rgba(171, 190, 209, 1)
 }
+
 .markatingbox .section2 .boxitem::after {
     content: '';
     position: absolute;
@@ -506,6 +552,7 @@ text-align: center;
     transition: 0.5s;
     /* Move inner content down slightly on hover */
 }
+
 .markatingbox .section2 .boxitem img {
     height: 100%;
     width: 100%;
@@ -516,7 +563,7 @@ text-align: center;
 .markatingbox .section2 .boxinneritem h2 {
     color: #717171;
     font-size: 2rem;
-        margin-top: 1.5rem;
+    margin-top: 1.5rem;
     text-align: center;
     line-height: 2.5rem;
 }
@@ -527,14 +574,17 @@ text-align: center;
     margin-top: 20px;
     text-align: center;
 }
+
 .markatingbox .section2 .boxinneritem h3 i {
     margin-left: 1rem;
 }
+
 footer {
     padding: 2rem;
     text-align: center;
     background-color: #4CAF4F;
 }
+
 /* //mobile navbar */
 .menu {
     position: relative;
