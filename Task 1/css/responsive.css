@@ -1,6 +1,6 @@
 @media only screen and (max-width: 480px) {
     html {
-        font-size: 0.28rem;
+        font-size: 0.30rem;
     }
 
     .menu {
@@ -47,7 +47,7 @@
         /* display: block; */
         flex-direction: column;
         gap: 25px;
-        height: 90vh;
+        height: 95vh;
     }
 
     .comanbox .sectionimg img {
