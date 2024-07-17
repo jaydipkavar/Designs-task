@@ -106,12 +106,15 @@
     }
 
     nav {
-        padding: 0%;
+        padding: 15px;
     }
 
     nav ul {
         display: none;
-    }
+        }
+        
+        .logo img {
+            height: 25px;
 
 
 }
@@ -120,6 +123,25 @@
     html {
         font-size: 0.35rem;
     }
+                                                                                                                                   .menu {
+                                                                                                                                       display: block;
+                                                                                                                                   }
+                                                                
+                                                                                                                                   .logo {
+                                                                                                                                       margin-left: 3%;
+                                                                                                                                   }
+                                                                
+                                                                                                                                   nav {
+                                                                                                                                       padding: 15px;
+                                                                                                                                   }
+                                                                
+                                                                                                                                   .logo img {
+                                                                                                                                       height: 25px;
+                                                                                                                                   }
+                                                                
+                                                                                                                                   nav ul {
+                                                                                                                                       display: none;
+                                                                                                                                   }
 
 }
 
@@ -152,6 +174,6 @@
 
 
     }
-
+}
     /* Large Desktops (min-width: 1201px) */
     @media only screen and (min-width: 1201px) {}
