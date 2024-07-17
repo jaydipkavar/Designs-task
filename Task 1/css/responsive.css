@@ -38,9 +38,11 @@
         height: 60px;
         width: 60px;
     }
-.managebox .content h1 {
-    width: 80%;
-}
+
+    .managebox .content h1 {
+        width: 80%;
+    }
+
     .managebox .section1 {
         gap: 50px;
     }
@@ -49,12 +51,13 @@
         /* display: block; */
         flex-direction: column;
         gap: 25px;
-      
+
     }
-                .timbox .section2 h6 {
-        
-                    width: 100%;
-                }
+
+    .timbox .section2 h6 {
+
+        width: 100%;
+    }
 
     .comanbox .sectionimg img {
         height: 100rem;
@@ -92,7 +95,7 @@
 
     .showhelpbox {
         gap: 3rem;
-                width: 100%;
+        width: 100%;
     }
 }
 
@@ -111,69 +114,70 @@
 
     nav ul {
         display: none;
+    }
+
+    .logo img {
+        height: 25px;
+
+
+    }
+}
+
+    @media only screen and (min-width: 769px) and (max-width: 991px) {
+        html {
+            font-size: 0.35rem;
         }
-        
+
+        .menu {
+            display: block;
+        }
+
+        .logo {
+            margin-left: 3%;
+        }
+
+        nav {
+            padding: 15px;
+        }
+
         .logo img {
             height: 25px;
+        }
 
-
-}
-
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-    html {
-        font-size: 0.35rem;
-    }
-                                                                                                                                   .menu {
-                                                                                                                                       display: block;
-                                                                                                                                   }
-                                                                
-                                                                                                                                   .logo {
-                                                                                                                                       margin-left: 3%;
-                                                                                                                                   }
-                                                                
-                                                                                                                                   nav {
-                                                                                                                                       padding: 15px;
-                                                                                                                                   }
-                                                                
-                                                                                                                                   .logo img {
-                                                                                                                                       height: 25px;
-                                                                                                                                   }
-                                                                
-                                                                                                                                   nav ul {
-                                                                                                                                       display: none;
-                                                                                                                                   }
-
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    html {
-        font-size: 0.45rem;
-    }
-
-    .markatingbox p {
-        width: 70%;
-    }
-
-    .markatingbox .section2 {
-        justify-content: space-between;
-    }
-
-    .markatingbox .section2 .boxitem {
-        max-width: 280px;
-        max-height: 250px;
-    }
-
-    .markatingbox .section2 .boxinneritem {
-        max-width: 250px;
-        max-height: 160px;
-        left: 5%;
-    }
-
-    .comanbox {
-        justify-content: space-evenly;
-
+        nav ul {
+            display: none;
+        }
 
     }
-}
-    /* Large Desktops (min-width: 1201px) */
-    @media only screen and (min-width: 1201px) {}
+
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        html {
+            font-size: 0.45rem;
+        }
+
+        .markatingbox p {
+            width: 70%;
+        }
+
+        .markatingbox .section2 {
+            justify-content: space-between;
+        }
+
+        .markatingbox .section2 .boxitem {
+            max-width: 280px;
+            max-height: 250px;
+        }
+
+        .markatingbox .section2 .boxinneritem {
+            max-width: 250px;
+            max-height: 160px;
+            left: 5%;
+        }
+
+        .comanbox {
+            justify-content: space-evenly;
+
+
+        }
+    }
+
