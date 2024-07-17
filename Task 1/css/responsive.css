@@ -1,14 +1,22 @@
 @media only screen and (max-width: 480px) {
     html {
-        font-size: 0.25rem;
+        font-size: 0.28rem;
     }
 
     .menu {
         display: block;
     }
 
+    .logo {
+        margin-left: 3%;
+    }
+
     nav {
-        padding: 0%;
+        padding: 15px;
+    }
+
+    .logo img {
+        height: 25px;
     }
 
     nav ul {
@@ -17,8 +25,12 @@
 
     .sliderbox {
         display: block;
-        justify-content: center;
-        align-items: center;
+        height: 90vh;
+    }
+
+    .sliderbox .slideimg div img {
+        height: 70rem;
+        margin-top: 20px;
     }
 
     .clientlogo img {
@@ -35,6 +47,11 @@
         /* display: block; */
         flex-direction: column;
         gap: 20px;
+        height: 100vh;
+    }
+
+    .comanbox .sectionimg img {
+        height: 100rem;
     }
 
     .helpbox {
@@ -73,7 +90,7 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     html {
-                font-size: 0.25rem;
+        font-size: 0.25rem;
     }
 
     .menu {
@@ -90,6 +107,7 @@
 
 
 }
+
 @media only screen and (min-width: 769px) and (max-width: 991px) {
     html {
         font-size: 0.35rem;
@@ -123,9 +141,9 @@
 
     .comanbox {
         justify-content: space-evenly;
+
+
     }
 
-}
-
-/* Large Desktops (min-width: 1201px) */
-@media only screen and (min-width: 1201px) {}
+    /* Large Desktops (min-width: 1201px) */
+    @media only screen and (min-width: 1201px) {}
