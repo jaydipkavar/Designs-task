@@ -193,6 +193,8 @@ nav ul button:active {
 .managebox .content h1 {
     color: #4D4D4D;
     font-size: 5rem;
+    width: 45%;
+        text-align: center;
 }
 
 
