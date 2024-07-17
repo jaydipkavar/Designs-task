@@ -20,6 +20,7 @@ nav {
     padding: 25px;
     position: sticky;
     top: 0;
+    z-index: 5;
 }
 
 .logo {
@@ -518,6 +519,7 @@ height: 50rem;
         width: 33rem;
         padding: 2.5rem;
     border-radius: 10px;
+    z-index: 0;
     overflow: hidden;
     position: absolute;
     bottom: -20%;
