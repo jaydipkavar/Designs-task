@@ -47,7 +47,7 @@
         /* display: block; */
         flex-direction: column;
         gap: 25px;
-        height: 100vh;
+      
     }
 
     .comanbox .sectionimg img {
