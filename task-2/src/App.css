@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.mainbox {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.innerbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 60vh;
+  border: 1px solid;
+}
+
+.innerbox .section1 {
+  background-color: red;
+  width: 50%;
+  height: 100%;
+}
+
+.innerbox .section2 {
+  /* background-color: rgb(80, 223, 14); */
+  width: 50%;
+  height: 100%;
+}
+
+.innerbox .section2 img {
+  width: 80%;
+  height: 60%;
+  margin-top: auto;
+}
