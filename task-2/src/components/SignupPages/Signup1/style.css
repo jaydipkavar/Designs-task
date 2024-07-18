@@ -38,7 +38,7 @@
     line-height: 30px;
 }
 
-.singupdiv {
+.signupdiv {
     width: 95%;
     align-items: center;
     justify-content: center;
@@ -76,7 +76,7 @@
     font-size: 15px;
 }
 
-.section1 p {
+.innerbox .section1 p {
     font-size: 14px;
     margin-top: 10px;
     color: rgba(0, 0, 0, 0.5);
@@ -90,7 +90,9 @@
     position: relative;
     margin: 20px 0;
     font-weight: bold;
-    color: #888;
+    color: #535353;
+        width: 100%;
+        text-align: center;
 }
 
 .or-divider::before,
@@ -98,8 +100,8 @@
     content: "";
     position: absolute;
     top: 40%;
-    width: 125px;
-    height: 2px;
+    width: 35%;
+        height: 1px;
     background-color: #888;
 }
 
@@ -176,7 +178,7 @@
         line-height: 22px;
     }
 
-    .singupdiv {
+                                                                                                                                .signupdiv {
         flex-direction: column;
         gap: 5px;
     }

@@ -1,0 +1,51 @@
+.signup4box {
+    background-image: url('../../../assets/images/4.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-start;
+}
+
+.innerbox3 {
+    margin-left: 15%;
+    height: auto;
+    width: 25%;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(1px);
+}
+
+.innerbox3 h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+
+}
+
+.innerbox3 p {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.innerbox3 button {
+    width: 45%;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border: 1px solid #00C0A6;
+    border-radius: 50px;
+    background-color: #00C0A6;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.store-links {
+    margin-top: 70px;
+}
+
+.store-links a {
+    margin-right: 15px;
+}
+
+.store-links img {
+    width: 200px;
+    height: auto;
+}
