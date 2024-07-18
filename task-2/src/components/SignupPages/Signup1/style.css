@@ -1,0 +1,193 @@
+.innerbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 65vh;
+
+    border: 1px solid;
+
+}
+
+.section1 {
+    width: 50%;
+    height: 100%;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contentdiv {
+    width: 90%;
+}
+
+.contentdiv h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    line-height: 50px;
+}
+
+.contentdiv h3 {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 100;
+    width: 80%;
+    line-height: 30px;
+}
+
+.singupdiv {
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 15px;
+    border-radius: 50px;
+    border: 1px solid;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.inputdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.inputdiv input {
+    padding: 15px;
+    width: 65%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.inputdiv button {
+    padding: 15px;
+    width: 25%;
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #505ABB;
+    color: white;
+    font-size: 15px;
+}
+
+.section1 p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.section1 p a {
+    color: rgb(0, 0, 0);
+}
+
+.or-divider {
+    position: relative;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #888;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    width: 125px;
+    height: 2px;
+    background-color: #888;
+}
+
+.or-divider::before {
+    left: 40px;
+}
+
+.or-divider::after {
+    right: 40px;
+}
+
+.section2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 img {
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+}
+
+@media (max-width: 1200px) {
+    .innerbox {
+        width: 80%;
+        height: 70vh;
+    }
+
+    .section1,
+    .section2 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .innerbox {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .section1,
+    .section2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .contentdiv h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .contentdiv h3 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .inputdiv input,
+    .inputdiv button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentdiv h1 {
+        font-size: 25px;
+    }
+
+    .contentdiv h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .singupdiv {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .inputdiv {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .or-divider::before,
+    .or-divider::after {
+        width: 60px;
+    }
+}

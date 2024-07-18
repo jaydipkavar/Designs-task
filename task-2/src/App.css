@@ -2,41 +2,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
+body,
+html {
+  height: 100%;
+  font-family: sans-serif;
+}
+.header {
+  background-color: #e2e2e2;
+  
+}
+
+.header nav ul {
+  height: 7vh;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .header nav ul li a {
+    text-decoration: none;
+    color: black;
 }
 
 .mainbox {
-  height: 100vh;
+  height: 93vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-}
+  
+    /* border: 1px solid black; */
 
-.innerbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  height: 60vh;
-  border: 1px solid;
-}
-
-.innerbox .section1 {
-  background-color: red;
-  width: 50%;
-  height: 100%;
-}
-
-.innerbox .section2 {
-  /* background-color: rgb(80, 223, 14); */
-  width: 50%;
-  height: 100%;
-}
-
-.innerbox .section2 img {
-  width: 80%;
-  height: 60%;
-  margin-top: auto;
 }
