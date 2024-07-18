@@ -522,12 +522,11 @@ height: 50rem;
         width: 33rem;
         padding: 2.5rem;
     border-radius: 10px;
-    z-index: 0;
+    z-index: 4;
     overflow: hidden;
     position: absolute;
     bottom: -20%;
     left: 13%;
-    z-index: 5;
     background-color: #F5F7FA;
     box-shadow: -1px 7px 14px 0px rgba(171, 190, 209, 1)
 }
