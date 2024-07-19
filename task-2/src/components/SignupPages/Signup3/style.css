@@ -32,14 +32,55 @@
     margin-top: 10px;
 }
 
-.signupbox {
+.signupbox1,
+.signupbox2,
+.signupbox3 {
     margin-top: 6px;
     padding: 10px;
     width: 100%;
     font-weight: 100;
+    position: relative;
+    }
+    
+        .signupbox1::before,
+        .signupbox2::before,
+        .signupbox3::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-radius: 50px;
+            transition: width 0.5s ease-in-out;
+            z-index: -1;
+        }
+    
+        .signupbox1::before {
+            background: linear-gradient(-120deg, #4285F4 0%, #34A853 20%, #FBBC05 40%, #EA4335 100%);
+}
+
+.signupbox2::before {
+    background-color: #3b5998;
+}
+
+.signupbox3::before {
+    background-color: black;
 
 }
 
+.signupbox1:hover,
+.signupbox2:hover,
+.signupbox3:hover {
+    color: white;
+    transition: 0.9s;
+}
+
+.signupbox1:hover::before,
+.signupbox2:hover::before,
+.signupbox3:hover::before {
+    width: 100%;
+}
 .signupbox i {
     font-size: 1500px;
 }
@@ -56,10 +97,15 @@
     color: white;
     font-weight: 600;
     font-size: 15px;
-    padding: 10px;
+    padding: 12px;
     border-radius: 50px;
+    transform: translate(ease-in-out 0.5s);
 }
-
+.signup3btn:hover {
+box-shadow: 5px 5px 10px 5px rgb(0, 0, 0, 0.5);
+transition: 0.5s;
+transform: scale(0.9);
+}
 .signup3divider::after,
 .signup3divider::before {
     width: 30%;
@@ -83,4 +129,5 @@
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
+
 }

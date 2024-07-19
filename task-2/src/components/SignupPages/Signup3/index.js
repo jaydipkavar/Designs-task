@@ -19,13 +19,13 @@ const Signup3 = () => {
                 lobortis maximus
               </p>
             </div>
-            <div className='signupdiv signupbox'>
+            <div className='signupdiv signupbox1'>
               <FcGoogle className='icon' /> <p>Continue with Google</p>
             </div>
-            <div className='signupdiv signupbox'>
+            <div className='signupdiv signupbox2'>
               <FaFacebook className='icon' /> <p>Continue with Facebook</p>
             </div>
-            <div className='signupdiv signupbox'>
+            <div className='signupdiv signupbox3'>
               <FaApple className='icon' /> <p>Continue with Apple</p>
             </div>
             <div className='or-divider signup3divider'>OR</div>

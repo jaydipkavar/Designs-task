@@ -21,6 +21,8 @@ const Signup2 = () => {
             <button>Sign up</button>
           </section>
         </div>
+        <div className='colorboll1'></div>
+        <div className='colorboll2'></div>
       </div>
     </>
   );

@@ -15,7 +15,7 @@ function Signup1() {
               <h1>Design with us to unlock your creativity </h1>
               <h3>Access to thousands of design resources and templates</h3>
             </div>
-            <div className='signupdiv'>
+            <div className='signupdiv '>
               <FcGoogle className='icon' /> Sign up with your Google account
             </div>
             <div className='or-divider'> OR</div>

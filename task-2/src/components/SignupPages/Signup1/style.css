@@ -48,148 +48,190 @@
     border: 1px solid;
     gap: 10px;
     margin-top: 35px;
-}
-
-.inputdiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-}
-
-.inputdiv input {
-    padding: 15px;
-    width: 65%;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.inputdiv button {
-    padding: 15px;
-    width: 25%;
-    border: 1px solid;
-    border-radius: 5px;
-    font-weight: 600;
-    background-color: #505ABB;
-    color: white;
-    font-size: 15px;
-}
-
-.innerbox .section1 p {
-    font-size: 14px;
-    margin-top: 10px;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.section1 p a {
-    color: rgb(0, 0, 0);
-}
-
-.or-divider {
     position: relative;
-    margin: 20px 0;
-    font-weight: bold;
-    color: #535353;
+    overflow: hidden;
+    cursor: pointer;
+  
+}
+
+.innerbox .signupdiv::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #505ABB;
+    transition: width 0.5s ease-in-out;
+    
+    z-index: -1;
+
+}
+.innerbox .signupdiv:hover{
+    color: white;
+  
+    transition: 0.9s;
+}
+.innerbox .signupdiv:hover::before {
+    width: 100%;
+    
+}
+    .inputdiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .inputdiv input {
+        padding: 15px;
+        width: 65%;
+        border: 1px solid;
+        outline: none;
+        border-radius: 5px;
+    }
+
+    .inputdiv input:focus {
+        border: 2px solid #505ABB;
+
+    }
+
+    .inputdiv button {
+        padding: 15px;  
+        width: 25%;
+        border: 1px solid;
+        border-radius: 5px;
+        font-weight: 600;
+        background-color: #505ABB;
+        color: white;
+        font-size: 15px;
+    }
+  .inputdiv button:hover{
+  
+        background-color:rgb(79, 94, 226);
+        
+  }
+   .inputdiv button:active {
+
+     background-color: rgb(72, 89, 243);
+
+ }
+    .innerbox .section1 p {
+        font-size: 14px;
+        margin-top: 10px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .section1 p a {
+        color: rgb(0, 0, 0);
+    }
+
+    .or-divider {
+        position: relative;
+        margin: 20px 0;
+        font-weight: bold;
+        color: #535353;
         width: 100%;
         text-align: center;
-}
-
-.or-divider::before,
-.or-divider::after {
-    content: "";
-    position: absolute;
-    top: 40%;
-    width: 35%;
-        height: 1px;
-    background-color: #888;
-}
-
-.or-divider::before {
-    left: 40px;
-}
-
-.or-divider::after {
-    right: 40px;
-}
-
-.section2 {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.section2 img {
-    width: 100%;
-    height: auto;
-    margin-right: 50px;
-}
-
-@media (max-width: 1200px) {
-    .innerbox {
-        width: 80%;
-        height: 70vh;
-    }
-
-    .section1,
-    .section2 {
-        width: 50%;
-    }
-}
-
-@media (max-width: 768px) {
-    .innerbox {
-        flex-direction: column;
-        width: 90%;
-        height: auto;
-    }
-
-    .section1,
-    .section2 {
-        width: 100%;
-        height: auto;
-    }
-
-    .contentdiv h1 {
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .contentdiv h3 {
-        font-size: 18px;
-        line-height: 25px;
-    }
-
-    .inputdiv input,
-    .inputdiv button {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .contentdiv h1 {
-        font-size: 25px;
-    }
-
-    .contentdiv h3 {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-                                                                                                                                .signupdiv {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .inputdiv {
-        flex-direction: column;
-        gap: 5px;
     }
 
     .or-divider::before,
     .or-divider::after {
-        width: 60px;
+        content: "";
+        position: absolute;
+        top: 40%;
+        width: 35%;
+        height: 1px;
+        background-color: #888;
     }
-}
+
+    .or-divider::before {
+        left: 40px;
+    }
+
+    .or-divider::after {
+        right: 40px;
+    }
+
+    .section2 {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section2 img {
+        width: 100%;
+        height: auto;
+        margin-right: 50px;
+    }
+
+    @media (max-width: 1200px) {
+        .innerbox {
+            width: 80%;
+            height: 70vh;
+        }
+
+        .section1,
+        .section2 {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .innerbox {
+            flex-direction: column;
+            width: 90%;
+            height: auto;
+        }
+
+        .section1,
+        .section2 {
+            width: 100%;
+            height: auto;
+        }
+
+        .contentdiv h1 {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        .contentdiv h3 {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        .inputdiv input,
+        .inputdiv button {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .contentdiv h1 {
+            font-size: 25px;
+        }
+
+        .contentdiv h3 {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .signupdiv {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .inputdiv {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .or-divider::before,
+        .or-divider::after {
+            width: 60px;
+        }
+    }
