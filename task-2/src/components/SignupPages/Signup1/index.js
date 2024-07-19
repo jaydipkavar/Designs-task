@@ -21,7 +21,7 @@ function Signup1() {
             <div className='or-divider'> OR</div>
             <div className='inputdiv'>
               <input type='text' placeholder='Email Address' />
-              <button type='button'>Sing up</button>
+              <button type='button'>Sign up</button>
             </div>
             <p>
               By signing up, you agree to the <a href='#'>Terms of use</a> and{" "}

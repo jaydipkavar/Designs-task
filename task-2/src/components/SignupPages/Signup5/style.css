@@ -1,0 +1,36 @@
+.signup5box {
+    background-image: url('../../../assets/images/1.jpeg');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: center ;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+}
+
+.signup5box .section1 {
+    height: auto;
+    width: 25%;
+    background-color: aliceblue;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+.signup5box .section2 {
+    width: 50%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.signup5box .section2 h1 {
+    font-weight: 700;
+    font-size: 45px;
+    margin-top: 100px;
+}

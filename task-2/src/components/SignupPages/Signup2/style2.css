@@ -1,0 +1,144 @@
+.signup2innerbox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   box-shadow: 1px 1px 100px 1px rgba(0, 0, 0, 0.1);
+   border: none;
+   width: 50%;
+   height: auto;
+   border-radius: 20px;
+   padding: 70px;
+   background-color: #fff;
+   margin-top: 30px;
+   margin-bottom: 40px;
+}
+
+.signup2innerbox h2 {
+   text-align: center;
+}
+
+
+.formsection {
+   display: flex;
+   justify-content: center;
+}
+
+form {
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+
+}
+
+.signup2innerbox label {
+   margin: 10px 0 5px;
+}
+
+.signup2innerbox input[type="text"],
+.signup2innerbox input[type="email"],
+.signup2innerbox input[type="password"],
+select {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+}
+
+.signup2innerbox input:focus {
+   outline: none;
+   border-color: #007bff;
+}
+
+.password-container {
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+
+.password-container input {
+   flex: 1;
+}
+
+.password-toggle {
+   position: absolute;
+   right: 20px;
+   cursor: pointer;
+   top: 23%;
+}
+
+.gender-options {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin-bottom: 15px;
+   gap: 30px;
+}
+
+.gender-options input {
+   margin: 0 5px;
+}
+
+.date-selection {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 15px;
+}
+
+.date-selection label {
+   margin-right: 5px;
+}
+
+.marketing-checkbox {
+   display: flex;
+align-items: baseline;
+   margin-bottom: 15px;
+}
+
+.marketing-checkbox p {
+   margin-left: 10px;
+   width: 70%;
+}
+.policybox p{
+   font-size: 12px;
+   text-align: center;
+}
+.signup2innerbox button {
+   padding: 10px;
+   border-radius: 50px;
+   font-size: larger;
+   color: white;
+   background-color: rgba(0, 0, 0, 0.3);
+   border: none;
+}
+
+.recaptcha {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 15px 0;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+.recaptcha:hover {
+   background-color: #f0f0f0;
+}
+
+a {
+   color: #007bff;
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+p {
+   margin: 10px 0;
+
+}
