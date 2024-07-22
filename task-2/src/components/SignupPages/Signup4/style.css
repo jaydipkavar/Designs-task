@@ -1,92 +1,61 @@
-/* Base styles */
-.signup4box {
-    background-image: url('../../../assets/images/4.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.singupbox4 {
+    background-color: #1F1F1F;
+}
+.singupbox4 .section1 .contentbox {
+    width: 50%;
+
+}
+
+.singupbox4 .imagebox {
+    height: 400px;
+    width: 400px;
+    margin-top: 80px;
+}
+
+.singupbox4 .section1 {
+    color: white;
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.singupbox4 .section1 h1 {
+    font-size: 45px;
+    font-weight: 700;
+}
+.singupbox4 .section1 p {
+    font-size: 25px;
+    font-weight: 300;
+
+    letter-spacing: 2px;
+        color: rgb(255, 255, 255, 0.7);
+    }
+.singupbox4 .sectionformbox {
+
+    width: 60%;
+}
+.singupbox4 .sectionformbox .innerform {
+    background-color: white;
+    width: 35%;
+    height: auto;
+    padding: 60px 80px;
+    border-radius: 50px;
+    width: 80%;
+
+}
+.singupbox4 .sectionformbox input {
+    border-radius: 10px;
+    padding: 10px;
+}
+.singupbox4 .sectionformbox .checkboxsecton div {
     display: flex;
     justify-content: flex-start;
-    padding: 20px;
-}
-
-.innerbox3 {
-    margin-left: 15%;
-    height: auto;
-    width: 30%;
-    color: rgb(255, 255, 255);
-    backdrop-filter: blur(1px);
-    padding: 20px;
-        position: relative;
-}
-
-.innerbox3 h1 {
-    font-size: 40px;
-    width: 90%;
-    margin-bottom: 30px;
-    transition: 0.2s;
+    align-items: baseline;
     
 }
+.singupbox4 .sectionformbox .checkboxsecton div input {
+    margin-right: 10px;
 
-.innerbox3 p {
-    width: 90%;
-    font-size: 20px;
-    line-height: 36px;
 }
-
-.innerbox3 button {
-    width: 45%;
-    padding: 15px;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    border: 1px solid #00C0A6;
-    border-radius: 50px;
-    background-color: #00C0A6;
-    font-size: 18px;
-    margin-top: 30px;
-    position: relative;
-        overflow: hidden;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-    
-    .innerbox3 button::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 300%;
-        height: 300%;
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        transition: transform 0.3s;
-        transform: translate(-50%, -50%) scale(0);
-    }
-    
-    .innerbox3 button:hover::before {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    
-    .innerbox3 button:hover {
-        background-color: #009a8d;
-        transform: scale(1.05);
-}
-
-.store-links {
-    margin-top: 70px;
-    display: flex;
-        flex-wrap: wrap;
-}
-
-.store-links a {
-    margin-right: 20px;
-}
-
-.store-links img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    }
-    
-    .store-links img:hover {
-        transform: scale(1.1);
-        transition: 0.5s;
-    }

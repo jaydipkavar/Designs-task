@@ -1,11 +1,13 @@
 /** @format */
 
 import React from "react";
-import Nav from "./Nav";
+import SpeedDial from "./SpeedDial";
+
 const Layout = () => {
   return (
     <div className='header'>
-      <Nav />
+
+      <SpeedDial />
     </div>
   );
 };

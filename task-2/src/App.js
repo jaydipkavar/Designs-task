@@ -17,11 +17,11 @@ function App() {
       <BrowserRouter>
         <Layout />
         <Routes>
-          <Route path='/singup1' element={<Signup1 />}></Route>
-          <Route path='/singup2' element={<Signup2 />}></Route>
-          <Route path='/singup3' element={<Signup3 />}></Route>
-          <Route path='/singup4' element={<Signup4 />}></Route>
-          <Route path='/singup5' element={<Signup5 />}></Route>
+          <Route path='/signup1' element={<Signup1 />}></Route>
+          <Route path='/signup2' element={<Signup2 />}></Route>
+          <Route path='/signup3' element={<Signup3 />}></Route>
+          <Route path='/signup4' element={<Signup4 />}></Route>
+          <Route path='/signup5' element={<Signup5 />}></Route>
         </Routes>
       </BrowserRouter>
     </>

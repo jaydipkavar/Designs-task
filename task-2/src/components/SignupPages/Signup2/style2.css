@@ -13,26 +13,76 @@
    margin-top: 30px;
    margin-bottom: 40px;
 }
-
-.signup2innerbox h2 {
-   text-align: center;
+.signup2innerbox .section1 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
 }
 
+.signup2innerbox .logo {
+   height: 50px;
+   width: 50px;
+   border-radius: 100px;
+   background-color: #bebebe;
+}
+.signup2innerbox h2 {
+   text-align: center;
+   font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 20px;
+   }
+   
+   .signup2innerbox .dlinkbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 100px;
+      padding: 1px;
+      gap: 10px;
+      width: 100%;
+   }
+   
+   .signup2innerbox h3 {
+      padding: 10px;
+      margin-top: 20px;
+      position: relative;
+   }
+   
+   .signup2innerbox h3::after,
+   .signup2innerbox h3::before {
+      height: 2px;
+      width: 10rem;
+      position: absolute;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3);
+      top: 50%;
+}
 
+.signup2innerbox h3::after {
+   left: 100%;
+}
+
+.signup2innerbox h3::before {
+   right: 100%;
+}
 .formsection {
    display: flex;
    justify-content: center;
 }
 
-form {
+.formsection form {
    width: 80%;
    display: flex;
    flex-direction: column;
 
 }
 
-.signup2innerbox label {
+.signup2innerbox .formsection label {
    margin: 10px 0 5px;
+   color: rgba(0, 0, 0, 0.6);
 }
 
 .signup2innerbox input[type="text"],
@@ -43,8 +93,9 @@ select {
    padding: 10px;
    margin-bottom: 15px;
    border: 1px solid #ccc;
-   border-radius: 5px;
+   border-radius: 10px;
    box-sizing: border-box;
+   color: rgba(0, 0, 0, 0.6);
 }
 
 .signup2innerbox input:focus {
@@ -88,9 +139,7 @@ select {
    margin-bottom: 15px;
 }
 
-.date-selection label {
-   margin-right: 5px;
-}
+
 
 .marketing-checkbox {
    display: flex;
@@ -100,11 +149,20 @@ align-items: baseline;
 
 .marketing-checkbox p {
    margin-left: 10px;
-   width: 70%;
+   width: 100%;
+}
+.marketing-checkbox .checkbox :checked {
+   background-color: red;
+}
+.marketing-checkbox input[type='checkbox']:active {
+   background-color: #16b111;
+   /* Tailwind's blue-600 color */
+   border-color: #3bf644;
 }
 .policybox p{
-   font-size: 12px;
+   font-size: 13px;
    text-align: center;
+
 }
 .signup2innerbox button {
    padding: 10px;
@@ -116,22 +174,19 @@ align-items: baseline;
 }
 
 .recaptcha {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   
    margin: 15px 0;
    padding: 10px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
+
+   border-radius: 10px;
 }
 
-.recaptcha:hover {
-   background-color: #f0f0f0;
-}
+
 
 a {
-   color: #007bff;
-   text-decoration: none;
+   color: #000000;
+      text-decoration: underline;
+      margin-left: 3px;
 }
 
 a:hover {

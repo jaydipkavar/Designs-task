@@ -1,41 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body,
 html {
   height: 100%;
   font-family: sans-serif;
 }
 .header {
-  background-color: #e2e2e2;
+  background-color: #ffffff;
   
 }
+.header nav {
+  height: 10vh;
+}
 
-.header nav ul {
-  height: 7vh;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-    background-color: #f1f1f1;
-  }
-  
+
   .header nav ul li a {
     text-decoration: none;
     color: black;
 }
+.header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header nav .leftside {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  width: 30%;
+
+}
+
+.header nav .rightside {
+  width: 70%;
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+
+}
+
+.header nav .leftside .logo {
+  height: 45px;
+  width: 45px;
+  border-radius: 100px;
+  background-color: rgb(0, 0, 0);
+  margin-left: 50px;
+
+}
 
 .mainbox {
-  height: 93vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   
     /* border: 1px solid black; */
+
+}
+.speeddialbox {
+  background-color: #f1f1f1;
+}
+
+.speeddialbox li {
+  padding: 10px;
+}
+
+.speeddialbox a {
+  color: black;
+  list-style: none;
+  text-decoration: none;
+}
+
+.speeddialbox a {
+
+  text-decoration: none;
+}
+
+.speeddialbox a:hover li {
+
+  text-decoration: none;
+
+
+}
+
+.speeddialbox a li:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  list-style: none;
 
 }
