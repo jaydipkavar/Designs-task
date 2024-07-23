@@ -1,6 +1,22 @@
 .singupbox4 {
     background-color: #1F1F1F;
 }
+.Login-button {
+    padding: 10px 25px;
+    color: white;
+    border-radius: 10px;
+    font-size: larger;
+    border: 1px solid black;
+    background-color: black;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.Login-button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transform: scale(1.05);
+}
 .singupbox4 .section1 .contentbox {
     width: 50%;
 
@@ -58,4 +74,16 @@
 .singupbox4 .sectionformbox .checkboxsecton div input {
     margin-right: 10px;
 
+}
+.singupbox4 .sectionformbox button {
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 50px;
+
+}
+
+.singupbox4 .sectionformbox button:hover {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 0 6px white, 0 0 0 8px black;
+    transform: scale(1.05);
+    color: white;
 }

@@ -1,19 +1,13 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import image from "../../../assets/images/2.png";
 import Nav from "../../Nav";
-
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 const Signup4 = () => {
-  const countries = [
-    { code: "+1", name: "United States" },
-    { code: "+44", name: "United Kingdom" },
-    { code: "+91", name: "India" },
-    { code: "+81", name: "Japan" },
-    { code: "+33", name: "France" },
-    // Add more countries as needed
-  ];
+  const [phone, setPhone] = useState("");
   return (
     <>
       {" "}
@@ -64,7 +58,7 @@ const Signup4 = () => {
                   <option value='hi'>Hindi</option>
                 </select>
               </li>
-              <li class='signup-button'>
+              <li class='Login-button'>
                 <button>Log in</button>
               </li>
             </ul>
@@ -84,7 +78,7 @@ const Signup4 = () => {
         </section>
         <section className='sectionformbox'>
           {" "}
-          <div className="innerform">
+          <div className='innerform'>
             {" "}
             <h2 className='text-2xl font-bold mb-7 text-left'>Sign up now</h2>
             <form className='space-y-4'>
@@ -124,15 +118,31 @@ const Signup4 = () => {
                 />
               </div>
               <div>
-                <label htmlFor='phone' className='block text-gray-500'>
+                <label htmlFor='phone' className='block text-gray-500 mb-2'>
                   Phone number
                 </label>
 
-                <input
-                  type='tel'
-                  id='phone'
-                  className='w-full p-2 border border-gray-300 rounded'
-                  placeholder='Phone'
+                <PhoneInput
+                  country={"us"}
+                  value={phone}
+                  onChange={(phone) => setPhone(phone)}
+                  inputProps={{
+                    name: "phone",
+                    required: true,
+                    autoFocus: true,
+                  }}
+                  containerStyle={{ width: "100%" }}
+                  inputStyle={{
+                    width: "96%",
+                    padding: "22px",
+                    border: "1px solid #ccc",
+                    borderRadius: "10px",
+                    marginLeft:"25px"
+                  }}
+                  buttonStyle={{
+                    border: "1px solid #ccc",
+                    borderRadius: "4px 0 0 4px",
+                  }}
                 />
               </div>
               <div>
@@ -167,7 +177,7 @@ const Signup4 = () => {
               </div>
               <div className='flex items-center justify-start'>
                 <button className='px-10 py-3 bg-zinc-400 rounded-full text-white'>
-                  Signup
+                  Sign  up
                 </button>
                 <p className='ml-7'>
                   Already have an account?

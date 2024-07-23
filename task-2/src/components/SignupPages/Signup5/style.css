@@ -7,12 +7,15 @@
     align-items: baseline;
     position: relative;
 }
-
+.signup-button:hover {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px 0 rgb(0, 0, 0, 0.2);
+}
 .signup5box .section1 {
-        gap: 10px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+    gap: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     height: auto;
     width: 25%;
     background-color: aliceblue;
@@ -20,7 +23,7 @@
     top: 10%;
     right: 5%;
     padding: 80px 20px;
-        border-radius: 30px;
+    border-radius: 30px;
         box-shadow: 1px 1px 30px 1px rgb(0, 0, 0, 0.2);
         display: none;
     }
@@ -106,6 +109,7 @@
     font-size: large;
     font-weight: 500;
 }
+
 .signup5box .section2 {
     width: 50%;
     text-align: center;
@@ -121,64 +125,66 @@
     font-weight: 700;
     font-size: 45px;
     margin-top: 150px;
-    }
-    
-    .signup5box .section2 p {
-        width: 70%;
-        margin-top: 15px;
-        font-size: 18px;
+}
+
+.signup5box .section2 p {
+    width: 70%;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.signup5box .section2 button {
+    margin-top: 25px;
+    padding: 15px;
+    width: 25%;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: medium;
+    background-color: rgb(0, 0, 0);
+    position: relative;
         font-weight: 500;
-    }
-    
-    .signup5box .section2 button {
-        margin-top: 25px;
-        padding: 15px;
-        width: 25%;
-        border: none;
-        border-radius: 50px;
-        color: white;
-        font-size: medium;
-        background-color: rgb(0, 0, 0);
-    }
-    
-    .rightside .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    
-    }
-    
-    .rightside .search-item {
-        width: 30%;
-    }
-    
-    .rightside .search-item input {
-        width: 100%;
-        font-size: large;
-        border-radius: 100px;
-        background-color: rgb(0, 0, 0, 0.1);
-        border: 1px solid rgb(0, 0, 0, 0.3);
-    
-    }
-    
-    .rightside .language-selector {
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3%;
-    }
-    
-    .rightside .language-selector select {
-        background-color: transparent;
-        border: none;
-    }
-    
-    
-    .rightside .signup-button {
-        background-color: black;
-        color: white;
-        padding: 10px 30px;
-        margin-right: 30px;
-        border-radius: 10px;
+}
+
+.rightside .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.rightside .search-item {
+    width: 30%;
+}
+
+.rightside .search-item input {
+    width: 100%;
+    font-size: large;
+    border-radius: 100px;
+    background-color: rgb(0, 0, 0, 0.1);
+    border: 1px solid rgb(0, 0, 0, 0.3);
+
+}
+
+.rightside .language-selector {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.rightside .language-selector select {
+    background-color: transparent;
+    border: none;
+}
+
+
+.rightside .signup-button {
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    margin-right: 30px;
+    border-radius: 10px;
 }

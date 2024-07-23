@@ -13,6 +13,7 @@
    margin-top: 30px;
    margin-bottom: 40px;
 }
+
 .signup2innerbox .section1 {
    display: flex;
    justify-content: center;
@@ -27,38 +28,70 @@
    border-radius: 100px;
    background-color: #bebebe;
 }
+
 .signup2innerbox h2 {
    text-align: center;
    font-size: 25px;
-      font-weight: 600;
-      margin-bottom: 20px;
-   }
-   
-   .signup2innerbox .dlinkbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid rgba(0, 0, 0, 0.3);
-      border-radius: 100px;
-      padding: 1px;
-      gap: 10px;
-      width: 100%;
-   }
-   
-   .signup2innerbox h3 {
-      padding: 10px;
-      margin-top: 20px;
-      position: relative;
-   }
-   
-   .signup2innerbox h3::after,
-   .signup2innerbox h3::before {
-      height: 2px;
-      width: 10rem;
-      position: absolute;
-      content: "";
-      background-color: rgba(0, 0, 0, 0.3);
-      top: 50%;
+   font-weight: 600;
+   margin-bottom: 20px;
+}
+
+.signup2innerbox .dlinkbox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid rgba(0, 0, 0, 0.3);
+   border-radius: 100px;
+   padding: 1px;
+   gap: 10px;
+   position: relative;
+   width: 100%;
+
+}
+
+.signup2innerbox .dlinkbox p,
+.signup2innerbox .dlinkbox .icon {
+   z-index: 2;
+
+}
+
+.signup2innerbox .dlinkbox::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-color: #000000;
+   clip-path: circle(0%);
+   border-radius: 100px;
+   transition: 0.7s;
+}
+
+.signup2innerbox .dlinkbox:hover::before {
+   clip-path: circle(100%);
+}
+
+.signup2innerbox .dlinkbox:hover p,
+.signup2innerbox .dlinkbox:hover .icon {
+   color: white;
+   transition: 0.7s;
+}
+
+.signup2innerbox h3 {
+   padding: 10px;
+   margin-top: 20px;
+   position: relative;
+}
+
+.signup2innerbox h3::after,
+.signup2innerbox h3::before {
+   height: 2px;
+   width: 10rem;
+   position: absolute;
+   content: "";
+   background-color: rgba(0, 0, 0, 0.3);
+   top: 50%;
 }
 
 .signup2innerbox h3::after {
@@ -68,6 +101,7 @@
 .signup2innerbox h3::before {
    right: 100%;
 }
+
 .formsection {
    display: flex;
    justify-content: center;
@@ -143,7 +177,7 @@ select {
 
 .marketing-checkbox {
    display: flex;
-align-items: baseline;
+   align-items: baseline;
    margin-bottom: 15px;
 }
 
@@ -151,30 +185,40 @@ align-items: baseline;
    margin-left: 10px;
    width: 100%;
 }
+
 .marketing-checkbox .checkbox :checked {
    background-color: red;
 }
+
 .marketing-checkbox input[type='checkbox']:active {
    background-color: #16b111;
    /* Tailwind's blue-600 color */
    border-color: #3bf644;
 }
-.policybox p{
+
+.policybox p {
    font-size: 13px;
    text-align: center;
 
 }
+
 .signup2innerbox button {
    padding: 10px;
    border-radius: 50px;
    font-size: larger;
    color: white;
    background-color: rgba(0, 0, 0, 0.3);
-   border: none;
-}
+   border:1px solid rgba(0, 0, 0, 0.3);
 
+}
+.signup2innerbox button:hover {
+   background-color: transparent;
+   border: 1px solid black;
+   color: black;
+   transition: 0.9s;
+}  
 .recaptcha {
-   
+
    margin: 15px 0;
    padding: 10px;
 
@@ -185,8 +229,8 @@ align-items: baseline;
 
 a {
    color: #000000;
-      text-decoration: underline;
-      margin-left: 3px;
+   text-decoration: underline;
+   margin-left: 3px;
 }
 
 a:hover {

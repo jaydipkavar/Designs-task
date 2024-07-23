@@ -61,7 +61,7 @@ const Signup5 = () => {
                 </select>
               </li>
               <li class='signup-button'>
-                <button onClick={handleModal}>Signup</button>
+                <button onClick={handleModal}>Sign up</button>
               </li>
             </ul>
           </>
