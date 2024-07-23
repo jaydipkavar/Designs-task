@@ -6,8 +6,15 @@ import image from "../../../assets/images/2.png";
 import Nav from "../../Nav";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 const Signup4 = () => {
   const [phone, setPhone] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
   return (
     <>
       {" "}
@@ -137,7 +144,7 @@ const Signup4 = () => {
                     padding: "22px",
                     border: "1px solid #ccc",
                     borderRadius: "10px",
-                    marginLeft:"25px"
+                    marginLeft: "25px",
                   }}
                   buttonStyle={{
                     border: "1px solid #ccc",
@@ -146,11 +153,21 @@ const Signup4 = () => {
                 />
               </div>
               <div>
-                <label htmlFor='password' className='block text-gray-500'>
+                <label
+                  htmlFor='password'
+                  className='flex justify-between items-center text-gray-500'
+                >
                   Password
+                  <span
+                    className='flex items-center gap-2 cursor-pointer'
+                    onClick={togglePasswordVisibility}
+                  >
+                    {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                    {passwordVisible ? "Hide" : "Show"}
+                  </span>
                 </label>
                 <input
-                  type='password'
+                  type={passwordVisible ? "text" : "password"}
                   id='password'
                   className='w-full p-2 border border-gray-300 rounded'
                   placeholder='Password'
@@ -177,7 +194,7 @@ const Signup4 = () => {
               </div>
               <div className='flex items-center justify-start'>
                 <button className='px-10 py-3 bg-zinc-400 rounded-full text-white'>
-                  Sign  up
+                  Sign up
                 </button>
                 <p className='ml-7'>
                   Already have an account?

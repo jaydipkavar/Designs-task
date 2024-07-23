@@ -115,7 +115,10 @@ const Signup2 = () => {
               <ReCAPTCHA sitekey='Your client site key' className='recaptcha' />
               <button type='submit'>Sign up</button>
               <p style={{ textAlign: "center" }}>
-                Already have an account? <a href='#'>Log in</a>
+                Already have an account?{" "}
+                <a href='#' style={{ textDecoration: "underline" }}>
+                  Log in
+                </a>
               </p>
             </form>
           </section>

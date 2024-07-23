@@ -41,6 +41,21 @@ const SpeedDial = () => {
           <Link to='/signup5'>
             <li onClick={handleLinkClick}>Signup5</li>
           </Link>
+          <Link to='/Login1'>
+            <li onClick={handleLinkClick}>Login1</li>
+          </Link>
+          <Link to='/Login2'>
+            <li onClick={handleLinkClick}>Login2</li>
+          </Link>{" "}
+          <Link to='/Login3'>
+            <li onClick={handleLinkClick}>Login3</li>
+          </Link>{" "}
+          <Link to='/Login4'>
+            <li onClick={handleLinkClick}>Login4</li>
+          </Link>{" "}
+          <Link to='/Login5'>
+            <li onClick={handleLinkClick}>Login5</li>
+          </Link>{" "}
         </ul>
       </div>
       <button

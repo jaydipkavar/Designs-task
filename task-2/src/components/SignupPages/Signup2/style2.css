@@ -227,15 +227,13 @@ select {
 
 
 
-a {
+.policybox a {
    color: #000000;
    text-decoration: underline;
    margin-left: 3px;
 }
 
-a:hover {
-   text-decoration: underline;
-}
+
 
 p {
    margin: 10px 0;
