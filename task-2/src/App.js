@@ -1,7 +1,7 @@
 /** @format */
 
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Layout from "./components/Layout";
 
@@ -22,6 +22,7 @@ function App() {
       <BrowserRouter>
         <Layout />
         <Routes>
+          <Route path='/' element={<Navigate to='/signup1' />} />
           <Route path='/signup1' element={<Signup1 />}></Route>
           <Route path='/signup2' element={<Signup2 />}></Route>
           <Route path='/signup3' element={<Signup3 />}></Route>

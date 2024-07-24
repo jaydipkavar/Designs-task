@@ -1,0 +1,54 @@
+.mainboxlogin5 {
+    background-image: url("../../../assets/images/1.jpeg");
+    background-position: top 20% right;
+    height: 90vh;
+    background-size: 100% 350vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainboxlogin5 .innersection {
+    width: 60%;
+    background-color: white;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+}
+
+.mainboxlogin5 .innersection form {
+
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.mainboxlogin5 .innersection form label {
+    color: rgb(0, 0, 0, 0.6);
+
+}
+
+.mainboxlogin5 .innersection form input {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: transparent;
+
+}
+
+.mainboxlogin5 .innersection form button {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 600;
+}

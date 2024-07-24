@@ -21,19 +21,19 @@ const Signup4 = () => {
       <Nav
         content={
           <>
-            <ul class='navbar'>
-              <li class='search-item'>
-                <form class='max-w-md mx-auto'>
+            <ul className='navbar'>
+              <li className='search-item'>
+                <form className='max-w-md mx-auto'>
                   <label
                     for='default-search'
-                    class='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'
+                    className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'
                   >
                     Search
                   </label>
-                  <div class='relative'>
-                    <div class='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                  <div className='relative'>
+                    <div className='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
                       <svg
-                        class='w-4 h-4 text-gray-500 dark:text-gray-400'
+                        className='w-4 h-4 text-gray-500 dark:text-gray-400'
                         aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
                         fill='none'
@@ -51,21 +51,21 @@ const Signup4 = () => {
                     <input
                       type='search'
                       id='default-search'
-                      class='block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                      className='block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500'
                       placeholder='Search'
                       required
                     />
                   </div>
                 </form>
               </li>
-              <li class='language-selector'>
+              <li className='language-selector'>
                 <select>
                   <option value='en'>English(united state)</option>
                   <option value='gu'>Gujarati</option>
                   <option value='hi'>Hindi</option>
                 </select>
               </li>
-              <li class='Login-button'>
+              <li className='Login-button'>
                 <button>Log in</button>
               </li>
             </ul>

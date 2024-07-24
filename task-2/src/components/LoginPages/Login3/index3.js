@@ -25,50 +25,74 @@ const Login3 = () => {
         </section>
       </div>
       <div className='mainboxlogin3'>
-        <section className='leftformsection'>
-          <h1 className='w-full text-center text-2xl mb-8'>Log in</h1>
-          <form>
-            <div>
-              <label className='flex justify-between items-center mb-1'>
-                Email address
-              </label>
-              <input type='text' />
-            </div>
-            <div>
-              <label className='flex justify-between items-center mb-1'>
-                Password
-                <span
-                  className='flex items-center gap-2 cursor-pointer'
-                  onClick={togglePasswordVisibility}
-                >
-                  {passwordVisible ? <FaEyeSlash /> : <FaEye />}
-                  {passwordVisible ? "Hide" : "Show"}
-                </span>
-              </label>
-              <input
-                type={passwordVisible ? "text" : "password"}
-                className='w-full p-2 border border-gray-300 rounded'
-              />
-            </div>
+        <div className='flex justify-center items-center w-full'>
+          <div className='flex justify-center items-center flex-col '>
+            <div className='h-14 w-14 rounded-full bg-neutral-400'></div>
+            <h1 className='text-2xl mt-3'>Log in</h1>
+          </div>
+        </div>
+        <div className='flex justify-center items-center w-full h-2/4 '>
+          {" "}
+          <section className='leftformsection'>
+            <h1 className='w-full text-center text-2xl mb-8'>Log in</h1>
+            <form>
+              <div>
+                <label className='flex justify-between items-center mb-1'>
+                  Email address
+                </label>
+                <input type='text' />
+              </div>
+              <div>
+                <label className='flex justify-between items-center mb-1'>
+                  Password
+                  <span
+                    className='flex items-center gap-2 cursor-pointer'
+                    onClick={togglePasswordVisibility}
+                  >
+                    {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                    {passwordVisible ? "Hide" : "Show"}
+                  </span>
+                </label>
+                <input
+                  type={passwordVisible ? "text" : "password"}
+                  className='w-full p-2 border border-gray-300 rounded'
+                />
+              </div>
 
-            <button className='loginbtn'>Log in</button>
-          </form>
-        </section>
-        <div className='loginor'>OR </div>
-        <section className='rightdlinksection'>
-          <div className='dlinkbox'>
-            <FcGoogle className='mr-3 text-2xl' />
-            <p>Continue with Google</p>
-          </div>
-          <div className='dlinkbox'>
-            <FaFacebook className='mr-3 text-2xl' />
-            <p>Continue with Facebook</p>
-          </div>
-          <div className='dlinkbox'>
-            <MdEmail className='mr-3 text-2xl' />
-            <p>Sign up with Email</p>
-          </div>
-        </section>
+              <button className='loginbtn'>Log in</button>
+            </form>
+          </section>
+          <div className='loginor'>OR </div>
+          <section className='rightdlinksection'>
+            <div className='dlinkbox'>
+              <FcGoogle className='mr-3 text-2xl' />
+              <p>Continue with Google</p>
+            </div>
+            <div className='dlinkbox'>
+              <FaFacebook className='mr-3 text-2xl' />
+              <p>Continue with Facebook</p>
+            </div>
+            <div className='dlinkbox'>
+              <MdEmail className='mr-3 text-2xl' />
+              <p>Sign up with Email</p>
+            </div>
+          </section>
+        </div>
+        <div className='flex  items-center flex-col h-1/4 mt-6'>
+          <a href='#' className='underline font-bold'>
+            Can't log in?
+          </a>
+          <p className='w-2/3 text-center '>
+            Secure Login with reCAPTCHA subject to Google{" "}
+            <a href='#' className='underline mr-1 font-bold'>
+              Terms
+            </a>
+            &{" "}
+            <a href='#' className='underline font-bold  '>
+              Privacy
+            </a>
+          </p>
+        </div>{" "}
       </div>
     </>
   );

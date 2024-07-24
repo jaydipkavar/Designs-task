@@ -17,7 +17,38 @@ const Login2 = () => {
   };
   return (
     <>
-      <Nav />
+      <Nav
+        leftcontent={
+          <ul className='flex justify-evenly items-center gap-6'>
+            <li className='text-xl'>Home</li>
+            <li className='text-xl text-neutral-500'>Web designs</li>
+            <li className='text-xl text-neutral-500'>Mobile designs</li>
+            <li className='text-xl text-neutral-500'>Design principles</li>
+            <li className='text-xl text-neutral-500'>illustrations</li>
+          </ul>
+        }
+        content={
+          <>
+            <ul className='navbar flex justify-evenly items-center gap-6'>
+              <li className='language-selector'>
+                <select>
+                  <option value='en'>English (united state)</option>
+                  <option value='gu'>Gujarati</option>
+                  <option value='hi'>Hindi</option>
+                </select>
+              </li>
+              <li className='bg-white text-black rounded-xl border border-black px-8 py-3'>
+                <button>Log in</button>
+              </li>
+              <li>
+                <button className='bg-black text-white rounded-2xl border px-8 py-4 mr-8'>
+                  Start free trail
+                </button>
+              </li>
+            </ul>
+          </>
+        }
+      />
       <div className='mainboxlogin2'>
         <section className='centerlogin2box'>
           <h1>Log in</h1>

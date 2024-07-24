@@ -3,6 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+ 
 }
 
 .mainboxlogin3 .leftformsection,
@@ -89,15 +92,15 @@
 }
 
 .mainboxlogin3 .loginor::before {
-    top: -200%;
-    height: 200px;
+    top: -150%;
+    height: 150px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .mainboxlogin3 .loginor::after {
     top: 90%;
-    height: 200px;
+    height: 150px;
     left: 50%;
     transform: translateX(-50%);
 }

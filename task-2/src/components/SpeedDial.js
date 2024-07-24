@@ -1,29 +1,51 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const SpeedDial = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const speedDialRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   const handleLinkClick = () => {
     if (isOpen) {
       setIsOpen(false); // Close the menu when a link is clicked
     }
   };
 
+  const handleClickOutside = (event) => {
+    if (speedDialRef.current && !speedDialRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
     <div
+      ref={speedDialRef}
       data-dial-init
-      className='fixed bottom-6 start-6 group z-10 flex justify-center  flex-col items-center'
+      className='fixed bottom-6 start-6 group z-10 flex justify-center flex-col items-center'
     >
       <div
         id='speed-dial-menu-bottom-left'
-        className={`flex flex-col items-center ${isOpen ? "mb-4" : "hidden"}
-        space-y-2`}
+        className={`flex flex-col items-center ${
+          isOpen ? "mb-4" : "hidden"
+        } space-y-2`}
       >
         <ul className='speeddialbox'>
           <Link to='/signup1'>
@@ -41,21 +63,21 @@ const SpeedDial = () => {
           <Link to='/signup5'>
             <li onClick={handleLinkClick}>Signup5</li>
           </Link>
-          <Link to='/Login1'>
+          <Link to='/login1'>
             <li onClick={handleLinkClick}>Login1</li>
           </Link>
-          <Link to='/Login2'>
+          <Link to='/login2'>
             <li onClick={handleLinkClick}>Login2</li>
-          </Link>{" "}
-          <Link to='/Login3'>
+          </Link>
+          <Link to='/login3'>
             <li onClick={handleLinkClick}>Login3</li>
-          </Link>{" "}
-          <Link to='/Login4'>
+          </Link>
+          <Link to='/login4'>
             <li onClick={handleLinkClick}>Login4</li>
-          </Link>{" "}
-          <Link to='/Login5'>
+          </Link>
+          <Link to='/login5'>
             <li onClick={handleLinkClick}>Login5</li>
-          </Link>{" "}
+          </Link>
         </ul>
       </div>
       <button
