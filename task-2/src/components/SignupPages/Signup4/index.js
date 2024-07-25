@@ -98,7 +98,6 @@ const Signup4 = () => {
                     type='text'
                     id='firstName'
                     className='w-full p-2 border border-gray-300 rounded'
-                   
                   />
                 </div>
                 <div className='w-1/2'>
@@ -109,7 +108,6 @@ const Signup4 = () => {
                     type='text'
                     id='lastName'
                     className='w-full p-2 border border-gray-300 rounded'
-                 
                   />
                 </div>
               </div>
@@ -121,7 +119,6 @@ const Signup4 = () => {
                   type='email'
                   id='email'
                   className='w-full p-2 border border-gray-300 rounded'
-                 
                 />
               </div>
               <div>
@@ -170,7 +167,6 @@ const Signup4 = () => {
                   type={passwordVisible ? "text" : "password"}
                   id='password'
                   className='w-full p-2 border border-gray-300 rounded'
-                  
                 />
               </div>
               <div className='checkboxsecton'>
@@ -198,7 +194,7 @@ const Signup4 = () => {
                 </button>
                 <p className='ml-7'>
                   Already have an account?
-                  <a href='/login' className='text-black-500 '>
+                  <a href='/login' className='text-black-500 ml-1'>
                     Login
                   </a>
                 </p>
