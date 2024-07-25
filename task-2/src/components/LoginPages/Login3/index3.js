@@ -34,7 +34,6 @@ const Login3 = () => {
         <div className='flex justify-center items-center w-full h-2/4 '>
           {" "}
           <section className='leftformsection'>
-            <h1 className='w-full text-center text-2xl mb-8'>Log in</h1>
             <form>
               <div>
                 <label className='flex justify-between items-center mb-1'>

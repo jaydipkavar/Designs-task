@@ -15,7 +15,7 @@
 }
 
 .mainboxlogin2 .centerlogin2box {
-    border-radius: 10px;
+    border-radius: 20px;
     height: auto;
     width: 30%;
     box-shadow: 1px 1px 10px 1px rgb(0, 0, 0, 0.2);
@@ -52,11 +52,13 @@
 .mainboxlogin2 .login2formsection form input {
     padding: 12px;
     width: 100%;
-    border: 1px solid rgb(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background-color: transparent;
-
-}
+    box-sizing: border-box;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    
 
 .mainboxlogin2 .login2formsection .loginbtn {
     padding: 10px;
@@ -66,12 +68,13 @@
     background-color: rgb(0, 0, 0, 0.4);
     color: white;
     font-weight: 600;
-
+    transition: 0.5s all ease;
 }
 .mainboxlogin2 .login2formsection .loginbtn:hover{
-    transform: scale(0.9);
+    transform: scale(0.95);
     transition: 0.5s all ease;
     box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, 0.2);
+    background-color: green;
 
 }
 

@@ -97,6 +97,7 @@
     .mainboxlogin1 .sectionform .formbox form label {
         color: rgb(0, 0, 0, 0.5);
         width: 100%;
+        margin-bottom: 5px;
     }
 
     .mainboxlogin1 .sectionform .formbox form input {
@@ -104,7 +105,14 @@
         width: 100%;
         border: 1px solid rgb(0, 0, 0, 0.2);
         border-radius: 10px;
+    }
 
+ 
+
+    .mainboxlogin1 .sectionform .formbox form input:focus {
+        border-color: rgba(0, 0, 0, 0.5);
+        outline: none;
+box-shadow: 1px 8px 3px -3px rgba(182, 182, 182, 0.49)
     }
 
     .mainboxlogin1 .sectionform .formbox form button {
@@ -117,28 +125,31 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
-transition: 0.1s all ease;
+        transition: 0.1s all ease;
     }
 
-    .mainboxlogin1 .sectionform .formbox form button::before{
+    .mainboxlogin1 .sectionform .formbox form button::before {
         position: absolute;
         content: "";
         top: 50%;
         left: 50%;
-        width:100%;
+        width: 100%;
         height: 0%;
         background-color: #ffffff;
         z-index: -1;
         transform: translate(-50%, -50%);
         transition: all 0.6s ease;
     }
- .mainboxlogin1 .sectionform .formbox form button:hover {
-    color: black;
-   
- } 
- .mainboxlogin1 .sectionform .formbox form button:hover::before {
-    height: 100%;
- }
+
+    .mainboxlogin1 .sectionform .formbox form button:hover {
+        color: black;
+
+    }
+
+    .mainboxlogin1 .sectionform .formbox form button:hover::before {
+        height: 100%;
+    }
+
     .mainboxlogin1 .continue-with-facebook {
         border-radius: 50px;
         width: 100%;
@@ -201,8 +212,10 @@ transition: 0.1s all ease;
     .mainboxlogin1 .app-download-buttons img {
         width: 100%;
         border-radius: 10px;
+        transition: all ease 0.5s;
     }
 
     .mainboxlogin1 .app-download-buttons img:hover {
         transform: scale(1.1);
+        transition: all ease 0.5s;
     }

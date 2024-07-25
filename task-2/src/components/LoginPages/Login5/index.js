@@ -36,7 +36,7 @@ const Login5 = () => {
                   <option value='hi'>Hindi</option>
                 </select>
               </li>
-              <li className='bg-white hover:bg-black hover:text-white text-black rounded-xl border border-black px-8 py-3 mr-8'>
+              <li className='bg-white hover:bg-black hover:text-white text-black rounded-xl border border-black px-8 py-3 mr-8 ease-in-out duration-500'>
                 <button className='flex justify-center items-baseline '>
                   <FaUser className='mr-2' />
                   Sign in or create an account
@@ -91,7 +91,7 @@ const Login5 = () => {
               <div className='or-divider mb-4'>
                 <span>OR</span>
               </div>
-              <div className='w-full flex justify-center items-center p-4 border border-black rounded-full cursor-pointer text-xl hover:bg-black hover:text-white'>
+              <div className='w-full flex justify-center items-center p-4 border border-black rounded-full cursor-pointer text-xl hover:bg-black hover:text-white ease-in-out duration-500'>
                 <FcGoogle className='icon mr-3' /> Continue with Google
               </div>
               <p className='mt-6'>
@@ -131,7 +131,7 @@ const Login5 = () => {
                   </li>
                 ))}
             </ul>
-            <button className='p-4 mt-7 w-2/3 text-2xl bg-black border text-white border-black rounded-full hover:bg-white hover:text-black '>
+            <button className='p-4 mt-7 w-2/3 text-2xl bg-black border text-white border-black rounded-full hover:bg-white hover:text-black ease-in-out duration-500 '>
               Create an account
             </button>
           </div>

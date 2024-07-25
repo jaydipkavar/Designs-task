@@ -94,6 +94,7 @@ const Login4 = () => {
             </a>
           </p>
         </div>
+        <div className='absolute left-50% top-0 bottom-0 w-1 bg-neutral-200'></div>
         <div className='qrdiv flex justify-center items-center flex-col  w-2/4'>
           <img src={qrimg} className='w-3/4 h-3/4' alt='qrimage' />
           <div className='flex justify-center items-center flex-col'>

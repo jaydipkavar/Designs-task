@@ -37,7 +37,7 @@ const Login2 = () => {
                   <option value='hi'>Hindi</option>
                 </select>
               </li>
-              <li className='bg-white hover:bg-emerald-500 text-black rounded-xl border border-black px-8 py-3'>
+              <li className='bg-white hover:bg-green-900 hover:text-white ease-in-out duration-300 text-black rounded-xl border border-black px-8 py-3'>
                 <button>Log in</button>
               </li>
               <li>

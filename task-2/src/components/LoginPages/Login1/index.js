@@ -31,7 +31,7 @@ const Login1 = () => {
             <form>
               <div>
                 <label>Phone number, username, or email address</label>
-                <input type='text' />
+                <input type='text' className='mt-1' />
               </div>
               <div>
                 <label className='flex justify-between items-center'>
@@ -57,14 +57,14 @@ const Login1 = () => {
             <div className='continue-with-facebook'>
               <FaFacebook className='icon mr-3' /> Continue with Facebook
             </div>
-            <a href='#' className='mt-6 underline text-xl '>
+            <a href='#' className='mt-6 underline font-bold'>
               Forgot your password?
             </a>
           </div>
           <div className='dsignupbox '>
             <p>
               Don't have an account?{" "}
-              <a href='#' className='underline'>
+              <a href='#' className='underline font-bold'>
                 Sign up
               </a>
             </p>
