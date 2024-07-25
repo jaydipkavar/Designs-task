@@ -37,7 +37,7 @@ const Login2 = () => {
                   <option value='hi'>Hindi</option>
                 </select>
               </li>
-              <li className='bg-white text-black rounded-xl border border-black px-8 py-3'>
+              <li className='bg-white hover:bg-emerald-500 text-black rounded-xl border border-black px-8 py-3'>
                 <button>Log in</button>
               </li>
               <li>
@@ -87,8 +87,8 @@ const Login2 = () => {
                   Forgot password?
                 </a>
               </p>
-              <button className='loginbtn'>Log in</button>
             </form>
+            <button className='loginbtn'>Log in</button>
             <section className='dlinks flex justify-between  mt-6'>
               <div className='iconbox'>
                 <FaFacebook />

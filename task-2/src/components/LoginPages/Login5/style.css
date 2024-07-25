@@ -52,3 +52,7 @@
     color: white;
     font-weight: 600;
 }
+.mainboxlogin5 .innersection form button:hover {
+    transition: all 0.5s ease;
+    background-color: green;
+}

@@ -61,11 +61,17 @@
 .mainboxlogin2 .login2formsection .loginbtn {
     padding: 10px;
     width: 100%;
-    border: 1px solid rgb(0, 0, 0, 0.1);
+    border: 1px solid rgba(168, 37, 37, 0.1);
     border-radius: 25px;
     background-color: rgb(0, 0, 0, 0.4);
     color: white;
     font-weight: 600;
+
+}
+.mainboxlogin2 .login2formsection .loginbtn:hover{
+    transform: scale(0.9);
+    transition: 0.5s all ease;
+    box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, 0.2);
 
 }
 
@@ -79,8 +85,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+        z-index: 1;
+    
+        overflow: hidden;
+    }
+    
+    .mainboxlogin2 .dlinks .iconbox:hover {
+        color: white;
+        box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, 0.2);
+        transform: scale(1.1);
+    }
+    
+    .mainboxlogin2 .dlinks .iconbox::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 0%;
+        background-color: #000000;
+        z-index: -1;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: all 0.6s ease;
 }
 
+.mainboxlogin2 .dlinks .iconbox:hover::before {
+    height: 200%;
+}
 .ssobtn {
     background-color: transparent;
     padding: 10px;
@@ -92,5 +124,32 @@
     font-size: larger;
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: flex-start;
+    z-index: 1;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    
+    .ssobtn::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #000000;
+        z-index: -1;
+        transition: 0.8s;
+        top: 0;
+        border-radius: 0 0 50% 50%;
+        transition: 0.5s all ease;
+    }
+    
+    .ssobtn:hover {
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .ssobtn:hover::before {
+        height: 180%;
 }

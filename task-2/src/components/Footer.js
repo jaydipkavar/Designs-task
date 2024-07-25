@@ -61,7 +61,7 @@ const Footer = () => {
               <img
                 src={iphone}
                 alt='Download on the App Store'
-                className='w-40 h-14'
+                className='w-45 h-14 hover:scale-110'
               />
             </a>
             <a
@@ -73,7 +73,7 @@ const Footer = () => {
               <img
                 src={android}
                 alt='Get it on Google Play'
-                className='w-40 h-14'
+                className='w-45 h-14 hover:scale-110'
               />
             </a>
           </div>
