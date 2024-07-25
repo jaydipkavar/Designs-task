@@ -39,7 +39,7 @@ const SpeedDial = () => {
     <div
       ref={speedDialRef}
       data-dial-init
-      className='fixed bottom-6 start-6 group z-10 flex justify-center flex-col items-center'
+      className='fixed bottom-6 start-6 group z-10 flex justify-start flex-col items-start w-1/3'
     >
       <div
         id='speed-dial-menu-bottom-left'

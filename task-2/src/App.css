@@ -106,3 +106,46 @@ html {
   list-style: none;
 
 }
+.date-selection {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.date-selection div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+
+}
+
+.date-selection label {
+  margin-bottom: 5px;
+
+}
+
+
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px 40px 10px 10px;
+  border-radius: 10px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+
+  background-size: 20px;
+
+}
+
+.custom-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.custom-select::-ms-expand {
+  display: none;
+}

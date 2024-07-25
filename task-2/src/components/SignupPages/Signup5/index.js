@@ -91,7 +91,9 @@ const Signup5 = () => {
             unde sit doloremque, molestiae aut! Quos beatae quibusdam omnis
             temporibus blanditiis sapiente
           </p>
-          <button>Sign up</button>
+          <button onClick={handleModal} className='hover:bg-transparent'>
+            Sign up
+          </button>
         </section>
       </div>
     </>

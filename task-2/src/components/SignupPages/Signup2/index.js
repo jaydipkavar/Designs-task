@@ -36,15 +36,12 @@ const Signup2 = () => {
           <section className='formsection'>
             <form>
               <label>Profile name</label>
-              <input type='text' placeholder='Enter your profile name' />
+              <input type='text' />
               <label>Email</label>
-              <input type='email' placeholder='Enter your email address' />
+              <input type='email' />
               <label>Password</label>
               <div className='password-container'>
-                <input
-                  type={showPassword ? "text" : "password"}
-                  placeholder='Enter your password'
-                />
+                <input type={showPassword ? "text" : "password"} />
                 <span
                   className='password-toggle'
                   onClick={togglePasswordVisibility}
@@ -73,7 +70,7 @@ const Signup2 = () => {
               <div className='date-selection'>
                 <div>
                   <label>Month</label>
-                  <select>
+                  <select className='custom-select'>
                     <option>January</option>
                     <option>February</option>
                     <option>March</option>
@@ -81,17 +78,15 @@ const Signup2 = () => {
                 </div>
                 <div>
                   <label>Date</label>
-                  <select>
+                  <select className='custom-select'>
                     <option>01</option>
                     <option>02</option>
                     <option>03</option>
                   </select>
                 </div>
                 <div>
-                  {" "}
                   <label>Year</label>
-                  <select>
-                    {" "}
+                  <select className='custom-select'>
                     <option>2001</option>
                     <option>2002</option>
                     <option>2003</option>
