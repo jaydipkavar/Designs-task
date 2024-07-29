@@ -66,6 +66,7 @@ const NewSidebar = () => {
         transition='left 0.3s'
         zIndex='docked'
         bgColor={"white"}
+        p={2}
       >
         <Box padding='5'>
           <Flex alignItems='center' justifyContent='space-between'>

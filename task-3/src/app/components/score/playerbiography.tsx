@@ -1,15 +1,10 @@
 /** @format */
 
 // components/PlayerBiography.tsx
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, GridItem } from "@chakra-ui/react";
 
 const PlayerBiography = () => (
-  <Box width='30%' bg='gray.100' p={4} borderRadius='md'>
-    <Text fontSize='lg' fontWeight='bold'>
-      Player Biography
-    </Text>
-    {/* Add player biography details here */}
-  </Box>
+  <GridItem colSpan={1} height='58vh' bg='white' borderRadius='50px'></GridItem>
 );
 
 export default PlayerBiography;
