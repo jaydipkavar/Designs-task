@@ -11,14 +11,16 @@ const Statics: NextPage = () => {
     <>
       {" "}
       <Sidebar />
-      <Flex direction='column' flex='1' p={4}>
-        <Heading as='h1' mb={4}>
-          Statics
-        </Heading>
-        <p>
-          Here is a list of all games available in the Tennis app. Add relevant
-          content here.
-        </p>
+      <Flex
+        direction='column'
+        p={4}
+        height='100vh'
+        overflowY='auto'
+        bg='gray.100'
+        display={"flex"}
+        alignItems={"center"}
+      >
+        <h1>statics</h1>
       </Flex>
     </>
   );

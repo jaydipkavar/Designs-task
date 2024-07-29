@@ -26,9 +26,7 @@ const AllGames: NextPage = () => {
         display={"flex"}
         alignItems={"center"}
       >
-        <Card align='center' h={"60vh"} w={"80%"}>
-          <h1>All Games</h1>
-        </Card>
+        <h1>All Games</h1>
       </Flex>
     </>
   );
