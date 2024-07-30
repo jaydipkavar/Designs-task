@@ -2,7 +2,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useEffect, useRef } from "react";
-import { Chart, ChartType, ChartConfiguration } from "chart.js/auto";
+import { Chart, ChartType } from "chart.js/auto";
 import { NextPage } from "next";
 
 const Statistic: NextPage = () => {
@@ -11,7 +11,7 @@ const Statistic: NextPage = () => {
 
   useEffect(() => {
     const data = [
-      { no: 1, count: 10 },
+      { no: 1, count: 12 },
       { no: 2, count: 20 },
       { no: 3, count: 15 },
       { no: 4, count: 25 },
@@ -21,20 +21,82 @@ const Statistic: NextPage = () => {
       { no: 8, count: 28 },
       { no: 9, count: 28 },
       { no: 10, count: 28 },
-      { no: 11, count: 50 },
+      { no: 11, count: 30 },
       { no: 12, count: 28 },
     ];
 
-    const createChart = (
+    const createBarChart = (
       ctx: CanvasRenderingContext2D | HTMLCanvasElement,
-      type: ChartType,
       data: any,
       options: any
     ) => {
       return new Chart(ctx, {
-        type,
+        type: "bar",
         data,
         options,
+        plugins: [],
+      });
+    };
+const scalePlugin: Plugin = {
+  id: 'scaleTransform',
+  beforeDraw(chart) {
+    const { ctx, chartArea } = chart;
+    const { top, bottom, left, right } = chartArea;
+
+    // Apply scaling transformation
+    ctx.save();
+    ctx.translate(left + (right - left) / 2, top + (bottom - top) / 2); // Move to center
+    ctx.scale(1.2, 1.2); // Scale by 1.2x
+    ctx.translate(-(left + (right - left) / 2), -(top + (bottom - top) / 2)); // Move back
+  },
+};
+
+    const createDoughnutChart = (
+      ctx: CanvasRenderingContext2D | HTMLCanvasElement,
+      data: any,
+      options: any
+    ) => {
+      return new Chart(ctx, {
+        type: "doughnut",
+        data,
+        options,
+        plugins: [
+          {
+            id: "centerText",
+            beforeDraw: function (chart) {
+              const ctx = chart.ctx;
+              const width = chart.width;
+              const height = chart.height;
+              const text1 = "23 wins";
+              const text2 = "75%";
+              const marginTop = 5;
+
+              ctx.restore();
+              let fontSize = (height / 114).toFixed(2);
+              ctx.font = `bold ${fontSize}em sans-serif`;
+              ctx.textBaseline = "middle";
+              ctx.fillStyle = "black";
+
+              const text1X = Math.round(
+                (width - ctx.measureText(text1).width) / 2
+              );
+              const text1Y = height / 2 - 10;
+
+              ctx.fillText(text1, text1X, text1Y);
+
+              fontSize = (height / 200).toFixed(2);
+              ctx.font = `${fontSize}em sans-serif`;
+              ctx.fillStyle = "rgba(0,0,0,0.2)"; // Light color for 75%
+              const text2X = Math.round(
+                (width - ctx.measureText(text2).width) / 2
+              );
+              const text2Y = text1Y + marginTop + 30;
+
+              ctx.fillText(text2, text2X, text2Y);
+              ctx.save();
+            },
+          },
+        ],
       });
     };
 
@@ -50,46 +112,78 @@ const Statistic: NextPage = () => {
     destroyChart(chartRef1.current);
     destroyChart(chartRef2.current);
 
-    chartRef1.current = createChart(
-      ctx1,
-      "bar",
-      {
-        labels: data.map((row) => row.no),
-        datasets: [
+    if (ctx1) {
+      const ctx1Canvas = ctx1.getContext("2d");
+
+      if (ctx1Canvas) {
+        const createGradient = (index: number) => {
+          const gradient = ctx1Canvas.createLinearGradient(0, 0, 0, 200);
+          const colors = [
+            ["rgba(75,192,192,1)", "rgba(255,99,132,1)"],
+            ["rgba(54,162,235,1)", "rgba(255,206,86,1)"],
+            ["rgba(153,102,255,1)", "rgba(255,159,64,1)"],
+            ["rgba(255,99,132,1)", "rgba(75,192,192,1)"],
+            ["rgba(255,159,64,1)", "rgba(153,102,255,1)"],
+            ["rgba(255,206,86,1)", "rgba(54,162,235,1)"],
+            ["rgba(75,192,192,1)", "rgba(153,102,255,1)"],
+            ["rgba(54,162,235,1)", "rgba(255,99,132,1)"],
+            ["rgba(255,159,64,1)", "rgba(75,192,192,1)"],
+            ["rgba(255,206,86,1)", "rgba(153,102,255,1)"],
+            ["rgba(255,99,132,1)", "rgba(54,162,235,1)"],
+            ["rgba(153,102,255,1)", "rgba(255,206,86,1)"],
+          ];
+          const [color1, color2] = colors[index % colors.length];
+          gradient.addColorStop(0, color1);
+          gradient.addColorStop(1, color2);
+          return gradient;
+        };
+
+        chartRef1.current = createBarChart(
+          ctx1,
           {
-            data: data.map((row) => row.count),
-            backgroundColor: "rgba(75, 192, 192, 0.2)",
-            borderColor: "rgba(75, 192, 192, 1)",
-            borderWidth: 1,
+            labels: data.map((row) => ` ${row.no}`),
+            datasets: [
+              {
+                data: data.map((row) => row.count),
+                backgroundColor: data.map((_, index) => createGradient(index)),
+                borderWidth: 1,
+                barThickness: 8,
+                borderRadius: 8,
+              },
+            ],
           },
-        ],
-      },
-      {
-        scales: {
-          x: {
-            beginAtZero: true,
-            ticks: {
-              stepSize: 1,
-              min: 1,
-              max: 12,
+          {
+            scales: {
+              x: {
+                beginAtZero: true,
+                ticks: {
+                  autoSkip: false,
+                },
+              },
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  stepSize: 10,
+                  max: 30,
+                },
+              },
             },
-          },
-          y: {
-            beginAtZero: true,
-            ticks: {
-              stepSize: 1,
-              max: 50,
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: false,
+              },
             },
-          },
-        },
+          }
+        );
       }
-    );
+    }
 
     if (ctx2) {
       const ctx2Canvas = ctx2.getContext("2d");
 
       if (ctx2Canvas) {
-        // Create gradients
         const gradient1 = ctx2Canvas.createRadialGradient(
           200,
           200,
@@ -123,9 +217,8 @@ const Statistic: NextPage = () => {
         gradient3.addColorStop(0, "rgba(255,233,133,1)");
         gradient3.addColorStop(1, "rgba(250,116,43,1)");
 
-        chartRef2.current = createChart(
+        chartRef2.current = createDoughnutChart(
           ctx2Canvas,
-          "doughnut",
           {
             datasets: [
               {
@@ -158,7 +251,6 @@ const Statistic: NextPage = () => {
       destroyChart(chartRef2.current);
     };
   }, []);
-
   return (
     <>
       <Flex direction='column' height='100vh' gap={4}>
@@ -183,7 +275,7 @@ const Statistic: NextPage = () => {
               2019
               <HiOutlineArrowLongRight />
             </Text>
-            <Box height='500px'>
+            <Box height='340px' marginTop={"20px"} padding={5}>
               <canvas id='acquisitions'></canvas>
             </Box>
           </Box>

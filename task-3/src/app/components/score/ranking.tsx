@@ -11,13 +11,21 @@ const Ranking = () => (
     fontFamily={"arial"}
     color={"white"}
   >
-    <Box bg='#F44771' borderRadius='20px' height='100px' p={4} mb={5}>
+    <Box
+      position='relative'
+      bg='#F44771'
+      borderRadius='20px'
+      height='100px'
+      p={4}
+      mb={5}
+      overflow='hidden' // Ensure overflow hidden to contain the circles
+    >
       <Text fontSize={18} fontWeight={600} ml={2}>
         Singles
       </Text>
       <Text
         display={"flex"}
-        justifyContent={"cstart"}
+        justifyContent={"start"}
         alignItems={"center"}
         fontWeight={800}
         fontSize={35}
@@ -26,14 +34,55 @@ const Ranking = () => (
       >
         18 <LuArrowBigUp />
       </Text>
+      <Box
+        position='absolute'
+        top={-7}
+        left={200}
+        width='200px'
+        height='100px'
+        borderRadius='50px'
+        backgroundColor='rgb(255,255,255,0.2)'
+        zIndex={1}
+      />
+      <Box
+        position='absolute'
+        top={8}
+        right={-5}
+        width='100px'
+        height='100px'
+        borderRadius='50%'
+        backgroundColor='rgb(255,255,255,0.2)'
+        zIndex={0}
+      />
+      <Box
+        position='absolute'
+        top={-16}
+        left={120}
+        width='200px'
+        height='100px'
+        borderRadius='50px'
+        transform='rotate(119deg)'
+        backgroundColor='transpart'
+        border='1px solid rgb(255,255,255,0.5)'
+        zIndex={0}
+      />
     </Box>
-    <Box bg='#FF9A3E' borderRadius='20px' height='100px' p={4}>
+
+    <Box
+      position='relative'
+      bg='#FF9A3E'
+      borderRadius='20px'
+      height='100px'
+      p={4}
+      mb={5}
+      overflow='hidden'
+    >
       <Text fontSize={18} fontWeight={600} ml={2}>
         Doubles
       </Text>
       <Text
         display={"flex"}
-        justifyContent={"cstart"}
+        justifyContent={"start"}
         alignItems={"center"}
         fontWeight={800}
         fontSize={35}
@@ -42,15 +91,55 @@ const Ranking = () => (
       >
         20 <LuArrowBigUp />
       </Text>
+      <Box
+        position='absolute'
+        top={-7}
+        left={200}
+        width='200px'
+        height='100px'
+        borderRadius='50px'
+        backgroundColor='rgb(255,255,255,0.2)'
+        zIndex={1}
+      />
+      <Box
+        position='absolute'
+        top={8}
+        right={-5}
+        width='100px'
+        height='100px'
+        borderRadius='50%'
+        backgroundColor='rgb(255,255,255,0.2)'
+        zIndex={0}
+      />
+      <Box
+        position='absolute'
+        top={-20}
+        left={100}
+        width='200px'
+        height='100px'
+        borderRadius='50px'
+        transform='rotate(90deg)'
+        backgroundColor='transpart'
+        border='1px solid rgb(255,255,255,0.5)'
+        zIndex={0}
+      />
     </Box>
-    <Box bg='#332A7C' borderRadius='20px' height='100px' p={4}>
-      {" "}
+
+    <Box
+      position='relative'
+      bg='#332A7C'
+      borderRadius='20px'
+      height='100px'
+      p={4}
+      mb={5}
+      overflow='hidden'
+    >
       <Text fontSize={18} fontWeight={600} ml={2}>
         Mixed Doubles
       </Text>
       <Text
         display={"flex"}
-        justifyContent={"cstart"}
+        justifyContent={"start"}
         alignItems={"center"}
         fontWeight={800}
         fontSize={35}
@@ -59,6 +148,38 @@ const Ranking = () => (
       >
         16 <LuArrowBigDown />
       </Text>
+      <Box
+        position='absolute'
+        top={-7}
+        left={200}
+        width='200px'
+        height='100px'
+        borderRadius='50px'
+        backgroundColor='rgb(255,255,255,0.2)'
+        zIndex={1}
+      />
+      <Box
+        position='absolute'
+        top={8}
+        right={-5}
+        width='100px'
+        height='100px'
+        borderRadius='50%'
+        backgroundColor='rgb(255,255,255,0.2)'
+        zIndex={0}
+      />
+      <Box
+        position='absolute'
+        top={-16}
+        left={90}
+        width='200px'
+        height='100px'
+        borderRadius='50px'
+        transform='rotate(65deg)'
+        backgroundColor='transpart'
+        border='1px solid rgb(255,255,255,0.5)'
+        zIndex={0}
+      />
     </Box>
   </SimpleGrid>
 );

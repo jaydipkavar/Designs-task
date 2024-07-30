@@ -70,7 +70,7 @@ const Score: NextPage = () => {
                   fontSize='25px'
                   fontWeight='bold'
                   color={"#353E6C"}
-                  ml={5}
+                  ml={2}
                   fontFamily={"arial"}
                 >
                   Statistic
@@ -81,7 +81,7 @@ const Score: NextPage = () => {
                   fontSize='25px'
                   fontWeight='bold'
                   color={"#353E6C"}
-                  ml={5}
+                  ml={2}
                   fontFamily={"arial"}
                 >
                   Ranking
