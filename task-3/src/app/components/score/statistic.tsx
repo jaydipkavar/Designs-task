@@ -7,7 +7,7 @@ import { NextPage } from "next";
 
 const Statistic: NextPage = () => {
   const chartRef1 = useRef<Chart | null>(null);
-  const chartRef2 = useRef<Chart | null>(null);
+  const chartRef2 = useRef<Chart | any>(null);
 
   useEffect(() => {
     const data = [
@@ -37,19 +37,6 @@ const Statistic: NextPage = () => {
         plugins: [],
       });
     };
-const scalePlugin: Plugin = {
-  id: 'scaleTransform',
-  beforeDraw(chart) {
-    const { ctx, chartArea } = chart;
-    const { top, bottom, left, right } = chartArea;
-
-    // Apply scaling transformation
-    ctx.save();
-    ctx.translate(left + (right - left) / 2, top + (bottom - top) / 2); // Move to center
-    ctx.scale(1.2, 1.2); // Scale by 1.2x
-    ctx.translate(-(left + (right - left) / 2), -(top + (bottom - top) / 2)); // Move back
-  },
-};
 
     const createDoughnutChart = (
       ctx: CanvasRenderingContext2D | HTMLCanvasElement,
