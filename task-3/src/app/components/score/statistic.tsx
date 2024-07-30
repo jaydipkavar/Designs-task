@@ -1,4 +1,6 @@
 /** @format */
+
+"use client";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useEffect, useRef } from "react";
@@ -241,13 +243,13 @@ const Statistic: NextPage = () => {
   return (
     <>
       <Flex direction='column' height='100vh' gap={4}>
-        <Flex direction='row' height='50vh' gap={4}>
+        <Flex direction='row' height='55vh' gap={4}>
           <Box
             flex='1'
             bg='white'
             borderRadius='50px'
             padding={4}
-            height='50vh'
+            height='55vh'
           >
             <Text
               display={"flex"}
@@ -262,7 +264,7 @@ const Statistic: NextPage = () => {
               2019
               <HiOutlineArrowLongRight />
             </Text>
-            <Box height='340px' marginTop={"20px"} padding={5}>
+            <Box height='370px' marginTop={"25px"} padding={5}>
               <canvas id='acquisitions'></canvas>
             </Box>
           </Box>
@@ -271,7 +273,7 @@ const Statistic: NextPage = () => {
             bg='white'
             borderRadius='50px'
             padding={4}
-            height='50vh'
+            height='55vh'
             display={"flex"}
             justifyContent={"space-around"}
             alignItems={"center"}

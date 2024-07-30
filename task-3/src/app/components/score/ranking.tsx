@@ -1,6 +1,6 @@
 /** @format */
 
-// components/Ranking.tsx
+"use client";
 import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import { LuArrowBigUp, LuArrowBigDown } from "react-icons/lu";
 
@@ -15,10 +15,10 @@ const Ranking = () => (
       position='relative'
       bg='#F44771'
       borderRadius='20px'
-      height='100px'
+      height='auto'
       p={4}
       mb={5}
-      overflow='hidden' // Ensure overflow hidden to contain the circles
+      overflow='hidden'
     >
       <Text fontSize={18} fontWeight={600} ml={2}>
         Singles
@@ -72,7 +72,7 @@ const Ranking = () => (
       position='relative'
       bg='#FF9A3E'
       borderRadius='20px'
-      height='100px'
+      height='auto'
       p={4}
       mb={5}
       overflow='hidden'
@@ -129,7 +129,7 @@ const Ranking = () => (
       position='relative'
       bg='#332A7C'
       borderRadius='20px'
-      height='100px'
+      height='auto'
       p={4}
       mb={5}
       overflow='hidden'

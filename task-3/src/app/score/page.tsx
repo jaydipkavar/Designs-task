@@ -72,6 +72,8 @@ const Score: NextPage = () => {
                   color={"#353E6C"}
                   ml={2}
                   fontFamily={"arial"}
+                  mt={2}
+                  mb={3}
                 >
                   Statistic
                 </Text>
@@ -83,6 +85,8 @@ const Score: NextPage = () => {
                   color={"#353E6C"}
                   ml={2}
                   fontFamily={"arial"}
+                  mt={2}
+                  mb={3}
                 >
                   Ranking
                 </Text>

@@ -1,10 +1,9 @@
 /** @format */
-
+"use client";
 import { Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 const NextMatch = () => (
-  
   <Box bg='white' borderRadius='30px' padding={6}>
     <Box>
       {" "}
@@ -52,7 +51,19 @@ const NextMatch = () => (
           <Image src='/assets/img.svg' alt='Logo' width={80} height={80} />
         </Box>
         <Text fontSize={80} color={"#1657FF"}>
-          :
+          <Box
+            height={"10px"}
+            width={"10px"}
+            bg={"#1657FF"}
+            borderRadius={50}
+          ></Box>
+          <Box
+            height={"10px"}
+            width={"10px"}
+            bg={"#1657FF"}
+            borderRadius={50}
+            mt={5}
+          ></Box>
         </Text>
         <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
           <Image src='/assets/img1.svg' alt='Logo' width={80} height={80} />

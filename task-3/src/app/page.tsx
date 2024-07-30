@@ -1,7 +1,7 @@
 /** @format */
 "use client";
 import { useEffect } from "react";
-import { useRouter } from "next/navigation"; // Updated import for next/navigation
+import { useRouter } from "next/navigation";
 import Sidebar from "./components/sidebar";
 import "../app/globals.css";
 
