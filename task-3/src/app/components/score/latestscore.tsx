@@ -110,9 +110,9 @@ const LatestScore = () => (
               >
                 <Text fontWeight='bold'>2</Text>
                 <Spacer w={2} />
-                <Text fontWeight='thin'>6</Text>
+                <Text fontWeight='500'>6</Text>
                 <Spacer w={2} />
-                <Text fontWeight='thin'>6</Text>
+                <Text fontWeight='500'>6</Text>
               </Flex>
               <Text
                 color='#FFBB38'
@@ -127,7 +127,7 @@ const LatestScore = () => (
               </Text>
             </Flex>
             <Flex align='center' mt={1}>
-              <Text flex='1' fontWeight='thin'>
+              <Text flex='1' fontWeight='500'>
                 Naomi O. (JPN)
               </Text>
               <Flex
@@ -139,9 +139,9 @@ const LatestScore = () => (
               >
                 <Text fontWeight='bold'>0</Text>
                 <Spacer w={2} />
-                <Text fontWeight='thin'>3</Text>
+                <Text fontWeight='500'>3</Text>
                 <Spacer w={2} />
-                <Text fontWeight='thin'>1</Text>
+                <Text fontWeight='500'>1</Text>
               </Flex>
               <Text width={"15%"} textAlign={"center"} borderRadius={10}></Text>
             </Flex>

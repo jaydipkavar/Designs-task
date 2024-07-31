@@ -245,11 +245,11 @@ const Statistic: NextPage = () => {
       <Flex direction='column' height='100vh' gap={4}>
         <Flex direction='row' height='55vh' gap={4}>
           <Box
-            flex='1'
             bg='white'
             borderRadius='50px'
             padding={4}
             height='55vh'
+            width={"50%"}
           >
             <Text
               display={"flex"}
@@ -269,7 +269,6 @@ const Statistic: NextPage = () => {
             </Box>
           </Box>
           <Box
-            flex='1'
             bg='white'
             borderRadius='50px'
             padding={4}
@@ -278,6 +277,7 @@ const Statistic: NextPage = () => {
             justifyContent={"space-around"}
             alignItems={"center"}
             flexDirection={"column"}
+            width={"50%"}
           >
             <Text
               display={"flex"}

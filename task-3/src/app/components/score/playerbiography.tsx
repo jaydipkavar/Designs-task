@@ -1,6 +1,7 @@
 /** @format */
 "use client";
 import { Box, Text, GridItem } from "@chakra-ui/react";
+import { Noto_Sans } from "next/font/google";
 import Image from "next/image";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 const PlayerBiography = () => {
@@ -47,7 +48,13 @@ const PlayerBiography = () => {
             }}
           />
         </Box>
-        <Box width={"40%"} ml={12} mt={4} fontWeight={"bold"}>
+        <Box
+          width={"40%"}
+          ml={10}
+          mt={2}
+          fontWeight={"bold"}
+          letterSpacing={0.5}
+        >
           <Text fontSize='xl' mb={2}>
             Biography
           </Text>
@@ -58,17 +65,17 @@ const PlayerBiography = () => {
             style={{
               listStyleType: "none",
               padding: 0,
-              marginTop: 10,
-              lineHeight: "1.8",
+              marginTop: 15,
+              lineHeight: "2",
             }}
           >
             <li>Age : 27</li>
             <li>Birth : 24 - 02 - 1993</li>
-            <li>Sex : Woman</li>
+            <li>Sex : Women</li>
             <li>WTA : 10</li>
           </ul>
         </Box>
-        <Box width={"40%"} ml={12} mt={4}>
+        <Box width={"40%"} ml={10} mt={4}>
           <Text fontSize='xl' mb={2} fontWeight={"bold"}>
             Social Media
           </Text>
@@ -80,7 +87,7 @@ const PlayerBiography = () => {
             color={"#BACCFD"}
             fontSize={"25"}
             mt={4}
-            ml={5}
+            ml={2}
           >
             <FaTwitter />
             <FaFacebookF />
