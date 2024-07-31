@@ -27,7 +27,7 @@ const Ranking = () => (
         display={"flex"}
         justifyContent={"start"}
         alignItems={"center"}
-        fontWeight={800}
+        fontWeight={600}
         fontSize={35}
         gap={2}
         ml={2}
@@ -84,7 +84,7 @@ const Ranking = () => (
         display={"flex"}
         justifyContent={"start"}
         alignItems={"center"}
-        fontWeight={800}
+        fontWeight={600}
         fontSize={35}
         gap={2}
         ml={2}
@@ -141,7 +141,7 @@ const Ranking = () => (
         display={"flex"}
         justifyContent={"start"}
         alignItems={"center"}
-        fontWeight={800}
+        fontWeight={600}
         fontSize={35}
         gap={2}
         ml={2}

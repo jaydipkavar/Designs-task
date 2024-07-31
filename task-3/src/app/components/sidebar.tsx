@@ -51,8 +51,8 @@ const NavItem: React.FC<NavItemProps> = ({
     color={color}
     bg={bg}
     fontSize={17}
-    fontWeight={600}
-    borderRadius={10}
+    fontWeight={500}
+    borderRadius={10} 
   >
     <Link href={href}>
       <HStack>

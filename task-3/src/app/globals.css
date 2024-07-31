@@ -19,5 +19,5 @@
 @font-face {
   font-family: "Medium";
   src: local("AirbnbCerealMedium"),
-    url("../app/font/SFPRODISPLAYBLACKITALIC.ttf") format("woff");
+    url("../app/font/SFPRODISPLAYREGULAR.ttf") format("woff");
 }

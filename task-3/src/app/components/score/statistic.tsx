@@ -20,8 +20,8 @@ const Statistic: NextPage = () => {
       { no: 5, count: 22 },
       { no: 6, count: 30 },
       { no: 7, count: 28 },
-      { no: 8, count: 28 },
-      { no: 9, count: 28 },
+      { no: 8, count: 22 },
+      { no: 9, count: 25 },
       { no: 10, count: 28 },
       { no: 11, count: 30 },
       { no: 12, count: 28 },
@@ -265,7 +265,12 @@ const Statistic: NextPage = () => {
               <HiOutlineArrowLongRight />
             </Text>
             <Box height='370px' marginTop={"25px"} padding={5}>
-              <canvas id='acquisitions'></canvas>
+              <canvas
+                id='acquisitions'
+                height={370}
+                width={370}
+                style={{ height: "100%", width: "100%" }}
+              ></canvas>
             </Box>
           </Box>
           <Box
