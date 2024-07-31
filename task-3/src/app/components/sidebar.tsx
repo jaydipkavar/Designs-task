@@ -33,17 +33,26 @@ interface NavItemProps {
   icon: React.ElementType;
   href: string;
   color: any;
+  bg: any;
   children: React.ReactNode;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ icon, href, color, children }) => (
+const NavItem: React.FC<NavItemProps> = ({
+  icon,
+  href,
+  color,
+  bg,
+  children,
+}) => (
   <ListItem
     padding='8px 16px'
-    _hover={{ backgroundColor: "white", color: "#1657FF" }}
+    _hover={{ backgroundColor: "#E9EFFF", color: "#1657FF" }}
     cursor='pointer'
     color={color}
+    bg={bg}
     fontSize={17}
     fontWeight={600}
+    borderRadius={10}
   >
     <Link href={href}>
       <HStack>
@@ -67,7 +76,7 @@ const NewSidebar = () => {
           transition='left 0.3s'
           zIndex='docked'
           bgColor={"white"}
-          p={2}
+          p={3}
         >
           <Box padding='5'>
             <Flex alignItems='center' justifyContent='space-between'>
@@ -80,7 +89,7 @@ const NewSidebar = () => {
                     height={50}
                   />
                 </Box>
-                <Text fontSize='xl' fontWeight='bold' color={"black"}>
+                <Text fontSize='3xl' ml={2} fontWeight='bold' color={"black"}>
                   Tennis
                 </Text>
               </Flex>
@@ -88,23 +97,28 @@ const NewSidebar = () => {
           </Box>
           <VStack align='center' spacing={5} p={5}>
             <List spacing={4} width='100%'>
-              <NavItem icon={FaGamepad} href='#' color={""}>
+              <NavItem icon={FaGamepad} href='#' bg={""} color={""}>
                 All Games
               </NavItem>
-              <NavItem icon={FaBroadcastTower} href='#' color={""}>
-                Live Games
+              <NavItem icon={FaBroadcastTower} href='#' bg={""} color={""}>
+                Live Games{" "}
               </NavItem>
-              <NavItem icon={FaChartLine} href='/score' color={"#1657FF"}>
+              <NavItem
+                icon={FaChartLine}
+                href='/score'
+                bg={"#E9EFFF"}
+                color={"#1657FF"}
+              >
                 Score
               </NavItem>
-              <NavItem icon={FaTags} href='#' color={""}>
+              <NavItem icon={FaTags} href='#' bg={""} color={""}>
                 Categories
               </NavItem>
-              <NavItem icon={FaVideo} href='#' color={""}>
+              <NavItem icon={FaVideo} href='#' bg={""} color={""}>
                 Video
               </NavItem>
-              <NavItem icon={FaChartBar} href='#' color={""}>
-                Statics
+              <NavItem icon={FaChartBar} href='#' bg={""} color={""}>
+                Statistic
               </NavItem>
             </List>
           </VStack>
@@ -141,8 +155,17 @@ const NewSidebar = () => {
                 fontFamily={"arial"}
                 color={"black"}
               >
-                Upgrade to{" "}
-                <span style={{ color: "#1657FF", fontWeight: "600" }}>PRO</span>
+                Upgrade to
+                <span
+                  style={{
+                    color: "#1657FF",
+                    fontWeight: "600",
+                    marginRight: "3px",
+                    marginLeft: "3px",
+                  }}
+                >
+                  PRO
+                </span>
                 for more features.
               </Text>
 
@@ -152,6 +175,7 @@ const NewSidebar = () => {
                 colorScheme='white'
                 borderRadius={15}
                 leftIcon={<FaLock />}
+                _hover={{ bg: "blue" }}
               >
                 Upgrade to Pro
               </Button>
