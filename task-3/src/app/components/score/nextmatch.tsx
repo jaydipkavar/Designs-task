@@ -54,7 +54,14 @@ const NextMatch = () => {
               >
                 Naomi O.
               </Text>
-              <Image src='/assets/img.svg' alt='Logo' width={80} height={80} />
+
+              <Image
+                src='/assets/img.svg'
+                alt='Logo'
+                width={80}
+                height={80}
+                loading='eager'
+              />
             </Box>
             <Box fontSize={80} color={"#1657FF"}>
               <Box
@@ -76,7 +83,13 @@ const NextMatch = () => {
               justifyContent={"center"}
               alignItems={"center"}
             >
-              <Image src='/assets/img1.svg' alt='Logo' width={80} height={80} />
+              <Image
+                src='/assets/img1.svg'
+                alt='Logo'
+                loading='eager'
+                width={80}
+                height={80}
+              />
               <Text
                 fontSize='25px'
                 fontWeight='bold'

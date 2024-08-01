@@ -1,7 +1,6 @@
 /** @format */
 "use client";
 import { Box, Text, GridItem } from "@chakra-ui/react";
-import { Noto_Sans } from "next/font/google";
 import Image from "next/image";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 const PlayerBiography = () => {
@@ -28,7 +27,13 @@ const PlayerBiography = () => {
               Anindita Rahmawati
             </Text>
             <Text display='flex' alignItems='center' mt={5} fontSize={18}>
-              <Image src='/assets/flag.svg' alt='Flag' width={24} height={24} />
+              <Image
+                src='/assets/flag.svg'
+                alt='Flag'
+                width={24}
+                height={24}
+                loading='eager'
+              />
               <span style={{ marginLeft: "8px" }}>Indonesia</span>{" "}
             </Text>
           </Box>
@@ -38,6 +43,7 @@ const PlayerBiography = () => {
             width={100}
             height={100}
             objectFit='cover'
+            loading='eager'
             style={{
               position: "absolute",
               bottom: "-70px",
@@ -59,7 +65,13 @@ const PlayerBiography = () => {
             Biography
           </Text>
 
-          <Image src='/assets/bioimg.svg' alt='Logo' width={70} height={70} />
+          <Image
+            src='/assets/bioimg.svg'
+            alt='Logo'
+            width={70}
+            height={70}
+            loading='eager'
+          />
 
           <ul
             style={{
@@ -89,12 +101,19 @@ const PlayerBiography = () => {
             mt={4}
             ml={2}
           >
-            <FaTwitter />
-            <FaFacebookF />
+            <FaTwitter className='Tiwtter' />
+            <FaFacebookF className='Facebook' />
           </Box>
         </Box>
         <Box position={"absolute"} top={0} right={-5}>
-          <Image src='/assets/woman.svg' alt='Logo' width={320} height={320} />
+          <Image
+            src='/assets/woman.svg'
+            alt='Logo'
+            width={330}
+            height={330}
+            style={{ height: "auto", width: "auto" }}
+            loading='eager'
+          />
         </Box>
       </GridItem>
     </>

@@ -13,8 +13,6 @@ import {
   Text,
   HStack,
   Button,
-  useDisclosure,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import {
   FaLock,
@@ -24,8 +22,6 @@ import {
   FaTags,
   FaVideo,
   FaChartBar,
-  FaBars,
-  FaTimes,
 } from "react-icons/fa";
 import Image from "next/image";
 
@@ -52,9 +48,9 @@ const NavItem: React.FC<NavItemProps> = ({
     bg={bg}
     fontSize={17}
     fontWeight={500}
-    borderRadius={10} 
+    borderRadius={10}
   >
-    <Link href={href}>
+    <Link href={href} textDecoration='none' _hover={{ textDecoration: "none" }}>
       <HStack>
         <Icon as={icon} mr={2} />
         <Text>{children}</Text>
@@ -87,6 +83,7 @@ const NewSidebar = () => {
                     alt='Logo'
                     width={50}
                     height={50}
+                    loading='eager'
                   />
                 </Box>
                 <Text fontSize='3xl' ml={2} fontWeight='bold' color={"black"}>
@@ -145,6 +142,7 @@ const NewSidebar = () => {
                 alt='Logo'
                 width={280}
                 height={50}
+                loading='eager'
               />
 
               <Text

@@ -1,9 +1,11 @@
 /** @format */
 
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box, Flex } from "@chakra-ui/react";
+import Sidebar from "./components/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +22,16 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        {" "}
-        <ChakraProvider>{children} </ChakraProvider>
+        <ChakraProvider>
+          <Flex width={"100%"} height={"100vh"} bg={"#F4F5F7"}>
+            <Box width='18%'>
+              <Sidebar />
+            </Box>
+            <Box width='82%' p={4} overflowY={"scroll"}>
+              {children}
+            </Box>
+          </Flex>
+        </ChakraProvider>
       </body>
     </html>
   );

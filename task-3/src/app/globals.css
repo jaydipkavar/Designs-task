@@ -19,5 +19,14 @@
 @font-face {
   font-family: "Medium";
   src: local("AirbnbCerealMedium"),
-    url("../app/font/SFPRODISPLAYREGULAR.ttf") format("woff");
+    url("../app/font/SFPRODISPLAYBLACKITALIC.ttf") format("woff");
+}
+.Tiwtter:hover {
+  color: #1DA1F2;
+  transition: all 0.5 ease;
+}
+
+.Facebook:hover {
+  color: #1877F2;
+  transition: all 0.5 ease;
 }

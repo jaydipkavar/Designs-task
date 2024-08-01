@@ -269,7 +269,7 @@ const Statistic: NextPage = () => {
                 id='acquisitions'
                 height={370}
                 width={370}
-                style={{ height: "100%", width: "100%" }}
+                style={{ height: "auto", width: "auto" }}
               ></canvas>
             </Box>
           </Box>
