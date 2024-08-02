@@ -20,7 +20,7 @@ const NextMatch = () => {
               fontWeight='bold'
               color={"#353E6C"}
               ml={3}
-              fontFamily={"arial"}
+
             >
               Your Next Match
             </Text>
@@ -29,7 +29,7 @@ const NextMatch = () => {
               fontWeight='bold'
               color={"#BACCFD"}
               mr={3}
-              fontFamily={"arial"}
+
             >
               18 January 2024
             </Text>
@@ -50,7 +50,7 @@ const NextMatch = () => {
                 fontWeight='bold'
                 color={"gray-200"}
                 mr={10}
-                fontFamily={"arial"}
+  
               >
                 Naomi O.
               </Text>
@@ -95,7 +95,7 @@ const NextMatch = () => {
                 fontWeight='bold'
                 color={"gray-200"}
                 ml={10}
-                fontFamily={"arial"}
+  
               >
                 Anindita R.
               </Text>

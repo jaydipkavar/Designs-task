@@ -242,7 +242,7 @@ const Statistic: NextPage = () => {
   }, []);
   return (
     <>
-      <Flex direction='column' height='100vh' gap={4}>
+      <Flex direction='column' height='auto' gap={4}>
         <Flex direction='row' height='55vh' gap={4}>
           <Box
             bg='white'

@@ -1,6 +1,5 @@
 /** @format */
 
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -23,11 +22,19 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <ChakraProvider>
-          <Flex width={"100%"} height={"100vh"} bg={"#F4F5F7"}>
-            <Box width='18%'>
+          <Flex>
+            <Box
+              width='18%'
+              position='fixed'
+              top='0'
+              left='0'
+              height='100vh'
+              overflowY='auto'
+              bg='white'
+            >
               <Sidebar />
             </Box>
-            <Box width='82%' p={4} overflowY={"scroll"}>
+            <Box width='82%' marginLeft='18%'>
               {children}
             </Box>
           </Flex>

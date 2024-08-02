@@ -8,7 +8,7 @@ const Ranking = () => (
   <SimpleGrid
     columns={[2, null, 3]}
     spacing='5'
-    fontFamily={"arial"}
+ 
     color={"white"}
   >
     <Box

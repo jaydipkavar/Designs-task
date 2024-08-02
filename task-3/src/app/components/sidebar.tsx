@@ -7,7 +7,6 @@ import {
   Box,
   List,
   ListItem,
-  Link,
   VStack,
   Icon,
   Text,
@@ -24,6 +23,7 @@ import {
   FaChartBar,
 } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 interface NavItemProps {
   icon: React.ElementType;
@@ -50,7 +50,7 @@ const NavItem: React.FC<NavItemProps> = ({
     fontWeight={500}
     borderRadius={10}
   >
-    <Link href={href} textDecoration='none' _hover={{ textDecoration: "none" }}>
+    <Link href={href}>
       <HStack>
         <Icon as={icon} mr={2} />
         <Text>{children}</Text>
@@ -94,7 +94,7 @@ const NewSidebar = () => {
           </Box>
           <VStack align='center' spacing={5} p={5}>
             <List spacing={4} width='100%'>
-              <NavItem icon={FaGamepad} href='#' bg={""} color={""}>
+              <NavItem icon={FaGamepad} href='' bg={""} color={""}>
                 All Games
               </NavItem>
               <NavItem icon={FaBroadcastTower} href='#' bg={""} color={""}>
@@ -102,7 +102,7 @@ const NewSidebar = () => {
               </NavItem>
               <NavItem
                 icon={FaChartLine}
-                href='/score'
+                href='./score'
                 bg={"#E9EFFF"}
                 color={"#1657FF"}
               >
@@ -150,7 +150,7 @@ const NewSidebar = () => {
                 textAlign={"center"}
                 fontSize={16}
                 mb={5}
-                fontFamily={"arial"}
+       
                 color={"black"}
               >
                 Upgrade to
