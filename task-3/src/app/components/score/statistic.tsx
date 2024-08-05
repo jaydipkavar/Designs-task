@@ -243,12 +243,12 @@ const Statistic: NextPage = () => {
   return (
     <>
       <Flex direction='column' height='auto' gap={4}>
-        <Flex direction='row' height='55vh' gap={4}>
+        <Flex direction='row' height='45vh' gap={4}>
           <Box
             bg='white'
             borderRadius='50px'
             padding={4}
-            height='55vh'
+            height='45vh'
             width={"50%"}
           >
             <Text
@@ -264,11 +264,11 @@ const Statistic: NextPage = () => {
               2019
               <HiOutlineArrowLongRight />
             </Text>
-            <Box height='370px' marginTop={"25px"} padding={5}>
+            <Box height='300px' marginTop={"25px"} padding={5}>
               <canvas
                 id='acquisitions'
-                height={370}
-                width={370}
+                height={300}
+                width={300}
                 style={{ height: "auto", width: "auto" }}
               ></canvas>
             </Box>
@@ -277,7 +277,7 @@ const Statistic: NextPage = () => {
             bg='white'
             borderRadius='50px'
             padding={4}
-            height='55vh'
+            height='45vh'
             display={"flex"}
             justifyContent={"space-around"}
             alignItems={"center"}

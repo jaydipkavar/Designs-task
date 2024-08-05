@@ -10,6 +10,8 @@ import Ranking from "../components/score/ranking";
 import PlayerBiography from "../components/score/playerbiography";
 import LatestScore from "../components/score/latestscore";
 import Header from "../components/header";
+import NewLatestScore from "../components/score/newlatescore";
+import NewNextMatch from "../components/score/newnextmatch";
 
 const Score: NextPage = () => {
   return (
@@ -19,7 +21,20 @@ const Score: NextPage = () => {
 
         <Flex direction='row' flex='1' paddingX={4} paddingY={2}>
           <Flex direction='column' flex='8' padding={4} gap={4}>
-            <NextMatch />
+            {/* <NextMatch /> */}
+
+            {/* <LatestScore /> */}
+            <Text
+              fontSize='25px'
+              fontWeight='bold'
+              color='#353E6C'
+              ml={2}
+              mt={2}
+              mb={3}
+            >
+              Latest Score
+            </Text>
+            <NewLatestScore />
 
             <Text
               fontSize='25px'
@@ -49,7 +64,8 @@ const Score: NextPage = () => {
           <Flex direction='column' flex='5' padding={4} gap={4} height='100%'>
             <Grid height='full' gap={4}>
               <PlayerBiography />
-              <LatestScore />
+              {/* <LatestScore /> */}
+              {/* <NewNextMatch /> */}
             </Grid>
           </Flex>
         </Flex>

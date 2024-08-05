@@ -3,12 +3,13 @@
 import { Box, Text, GridItem } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
+import NewNextMatch from "./newnextmatch";
 const PlayerBiography = () => {
   return (
     <>
       <GridItem
         colSpan={1}
-        height='68vh'
+        height='auto'
         bg='white'
         borderRadius='50px'
         overflow={"hidden"}
@@ -87,7 +88,7 @@ const PlayerBiography = () => {
             <li>WTA : 10</li>
           </ul>
         </Box>
-        <Box width={"40%"} ml={10} mt={4}>
+        <Box width={"40%"} ml={10} mt={4} mb={15}>
           <Text fontSize='xl' mb={2} fontWeight={"bold"}>
             Social Media
           </Text>
@@ -105,12 +106,17 @@ const PlayerBiography = () => {
             <FaFacebookF className='Facebook' />
           </Box>
         </Box>
+        <Box marginTop={"70PX"} fontSize={15}>
+          {" "}
+          <hr></hr>
+        </Box>
+        <NewNextMatch />
         <Box position={"absolute"} top={0} right={-5}>
           <Image
             src='/assets/woman.svg'
             alt='Logo'
-            width={330}
-            height={330}
+            width={350}
+            height={350}
             style={{ height: "auto", width: "auto" }}
             loading='eager'
           />
