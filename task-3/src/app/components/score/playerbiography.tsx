@@ -4,13 +4,16 @@ import { Box, Text, GridItem } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import NewNextMatch from "./newnextmatch";
+import { useTheme } from "@/app/themes/themescontext";
 const PlayerBiography = () => {
+  const { colorMode } = useTheme();
   return (
     <>
       <GridItem
         colSpan={1}
         height='auto'
-        bg='white'
+        bg={colorMode === "light" ? "white" : "gray.800"}
+        color={colorMode === "light" ? "black" : "white"}
         borderRadius='50px'
         overflow={"hidden"}
         position={"relative"}

@@ -6,10 +6,12 @@ import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useEffect, useRef } from "react";
 import { Chart, ChartType } from "chart.js/auto";
 import { NextPage } from "next";
+import { useTheme } from "@/app/themes/themescontext";
 
 const Statistic: NextPage = () => {
   const chartRef1 = useRef<Chart | null>(null);
   const chartRef2 = useRef<Chart | any>(null);
+  const { colorMode } = useTheme();
 
   useEffect(() => {
     const data = [
@@ -64,7 +66,7 @@ const Statistic: NextPage = () => {
               let fontSize = (height / 114).toFixed(2);
               ctx.font = `bold ${fontSize}em sans-serif`;
               ctx.textBaseline = "middle";
-              ctx.fillStyle = "black";
+              ctx.fillStyle = colorMode === "light" ? "black" : "white";
 
               const text1X = Math.round(
                 (width - ctx.measureText(text1).width) / 2
@@ -75,7 +77,10 @@ const Statistic: NextPage = () => {
 
               fontSize = (height / 200).toFixed(2);
               ctx.font = `${fontSize}em sans-serif`;
-              ctx.fillStyle = "rgba(0,0,0,0.2)"; // Light color for 75%
+              ctx.fillStyle =
+                colorMode === "light"
+                  ? "rgb(0,0,0,0.2)"
+                  : "rgb(255,255,255,0.4)";
               const text2X = Math.round(
                 (width - ctx.measureText(text2).width) / 2
               );
@@ -106,7 +111,7 @@ const Statistic: NextPage = () => {
 
       if (ctx1Canvas) {
         const createGradient = (index: number) => {
-          const gradient = ctx1Canvas.createLinearGradient(0, 0, 0, 200);
+          const gradient = ctx1Canvas.createLinearGradient(0, 255, 255, 200);
           const colors = [
             ["rgba(75,192,192,1)", "rgba(255,99,132,1)"],
             ["rgba(54,162,235,1)", "rgba(255,206,86,1)"],
@@ -131,6 +136,7 @@ const Statistic: NextPage = () => {
           ctx1,
           {
             labels: data.map((row) => ` ${row.no}`),
+
             datasets: [
               {
                 data: data.map((row) => row.count),
@@ -138,6 +144,7 @@ const Statistic: NextPage = () => {
                 borderWidth: 1,
                 barThickness: 8,
                 borderRadius: 8,
+          
               },
             ],
           },
@@ -239,13 +246,13 @@ const Statistic: NextPage = () => {
       destroyChart(chartRef1.current);
       destroyChart(chartRef2.current);
     };
-  }, []);
+  }, [colorMode]);
   return (
     <>
       <Flex direction='column' height='auto' gap={4}>
         <Flex direction='row' height='45vh' gap={4}>
           <Box
-            bg='white'
+            bg={colorMode === "light" ? "white" : "gray.800"}
             borderRadius='50px'
             padding={4}
             height='45vh'
@@ -259,6 +266,7 @@ const Statistic: NextPage = () => {
               gap={5}
               fontWeight={600}
               mt={5}
+              color={colorMode === "light" ? "black" : "white"}
             >
               <HiArrowLongLeft />
               2019
@@ -274,7 +282,7 @@ const Statistic: NextPage = () => {
             </Box>
           </Box>
           <Box
-            bg='white'
+            bg={colorMode === "light" ? "white" : "gray.800"}
             borderRadius='50px'
             padding={4}
             height='45vh'
@@ -292,39 +300,53 @@ const Statistic: NextPage = () => {
               gap={5}
               fontWeight={600}
               mt={5}
+              color={colorMode === "light" ? "black" : "white"}
             >
               Global Statistic
             </Text>
-            <Box height='250px'>
-              <canvas id='sales'></canvas>
-            </Box>
             <Box
-              w={"60%"}
-              display={"flex"}
-              justifyContent={"space-around"}
+              height='240px'
+              w={"100%"}
+              justifyContent={"center"}
               alignItems={"center"}
+              display={"flex"}
+              position={"relative"}
+              mb={5}
             >
+              <canvas id='sales'></canvas>
               <Box
-                h={5}
-                w={5}
-                bgGradient={
-                  "radial-gradient(circle, rgba(206,159,252,1) 0%, rgba(115,103,240,1) 100%);"
-                }
-              ></Box>
-              <Box
-                h={5}
-                w={5}
-                bgGradient={
-                  "radial-gradient(circle, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 100%);"
-                }
-              ></Box>
-              <Box
-                h={5}
-                w={5}
-                bgGradient={
-                  "radial-gradient(circle, rgba(255,233,133,1) 0%, rgba(250,116,43,1) 100%);"
-                }
-              ></Box>
+                w={"60%"}
+                position={"absolute"}
+                display={"flex"}
+                justifyContent={"space-around"}
+                alignItems={"center"}
+                gap={10}
+                left={250}
+                top={45}
+                flexDirection={"column"}
+              >
+                <Box
+                  h={5}
+                  w={5}
+                  bgGradient={
+                    "radial-gradient(circle, rgba(206,159,252,1) 0%, rgba(115,103,240,1) 100%);"
+                  }
+                ></Box>
+                <Box
+                  h={5}
+                  w={5}
+                  bgGradient={
+                    "radial-gradient(circle, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 100%);"
+                  }
+                ></Box>
+                <Box
+                  h={5}
+                  w={5}
+                  bgGradient={
+                    "radial-gradient(circle, rgba(255,233,133,1) 0%, rgba(250,116,43,1) 100%);"
+                  }
+                ></Box>
+              </Box>
             </Box>
           </Box>
         </Flex>

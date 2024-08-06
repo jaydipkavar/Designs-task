@@ -24,6 +24,7 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "../themes/themescontext";
 
 interface NavItemProps {
   icon: React.ElementType;
@@ -60,6 +61,8 @@ const NavItem: React.FC<NavItemProps> = ({
 );
 
 const NewSidebar = () => {
+  const { colorMode } = useTheme();
+
   return (
     <>
       <Flex>
@@ -67,11 +70,10 @@ const NewSidebar = () => {
           direction='column'
           width={"100%"}
           height='100vh'
-          bg='gray.800'
+          bg={colorMode === "light" ? "F4F5F7" : "gray.800"}
           color='#B9C0DE'
           transition='left 0.3s'
           zIndex='docked'
-          bgColor={"white"}
           p={3}
         >
           <Box padding='5'>
@@ -86,7 +88,12 @@ const NewSidebar = () => {
                     loading='eager'
                   />
                 </Box>
-                <Text fontSize='3xl' ml={2} fontWeight='bold' color={"black"}>
+                <Text
+                  fontSize='3xl'
+                  ml={2}
+                  fontWeight='bold'
+                  color={colorMode === "light" ? "black" : "white"}
+                >
                   Tennis
                 </Text>
               </Flex>
@@ -150,7 +157,6 @@ const NewSidebar = () => {
                 textAlign={"center"}
                 fontSize={16}
                 mb={5}
-       
                 color={"black"}
               >
                 Upgrade to

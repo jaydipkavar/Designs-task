@@ -12,11 +12,17 @@ import LatestScore from "../components/score/latestscore";
 import Header from "../components/header";
 import NewLatestScore from "../components/score/newlatescore";
 import NewNextMatch from "../components/score/newnextmatch";
+import { useTheme } from "../themes/themescontext";
 
 const Score: NextPage = () => {
+  const { colorMode } = useTheme();
   return (
     <>
-      <Flex direction='column' width='100%' bg='#F4F5F7'>
+      <Flex
+        direction='column'
+        width='100%'
+        bg={colorMode === "light" ? "gray.100" : "gray.700"}
+      >
         <Header />
 
         <Flex direction='row' flex='1' paddingX={4} paddingY={2}>
@@ -27,7 +33,7 @@ const Score: NextPage = () => {
             <Text
               fontSize='25px'
               fontWeight='bold'
-              color='#353E6C'
+              color={colorMode === "light" ? "#353E6C" : "white"}
               ml={2}
               mt={2}
               mb={3}
@@ -39,7 +45,7 @@ const Score: NextPage = () => {
             <Text
               fontSize='25px'
               fontWeight='bold'
-              color='#353E6C'
+              color={colorMode === "light" ? "#353E6C" : "white"}
               ml={2}
               mt={2}
               mb={3}
@@ -51,7 +57,7 @@ const Score: NextPage = () => {
             <Text
               fontSize='25px'
               fontWeight='bold'
-              color='#353E6C'
+              color={colorMode === "light" ? "#353E6C" : "white"}
               ml={2}
               mt={2}
               mb={3}

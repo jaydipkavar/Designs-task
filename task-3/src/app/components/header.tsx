@@ -2,6 +2,7 @@
 "use client";
 import {
   Box,
+  Button,
   HStack,
   Icon,
   Input,
@@ -12,11 +13,25 @@ import {
 import React, { useEffect, useState } from "react";
 import { FaBell, FaCog, FaSearch, FaTimes, FaUser } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { useTheme } from "../themes/themescontext";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { colorMode, toggleColorMode } = useTheme();
 
+  const backgroundColor = scrolled
+    ? colorMode === "light"
+      ? "rgba(255, 255, 255, 0.6)"
+      : "gray-600"
+    : "transparent";
+
+  const boxShadow = scrolled
+    ? colorMode === "light"
+      ? "-1px 16px 14px -8px rgba(218, 218, 218, 0.68)"
+      : "-1px 16px 14px -8px rgba(0, 0, 0, 0.5)"
+    : "none";
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -51,12 +66,25 @@ const Header = () => {
         justifyContent='space-between'
         alignItems='center'
         p={6}
-        position={"sticky"}
+        position='sticky'
         top={0}
-        className={`header ${scrolled ? "scrolled" : ""}`}
+        transition='background-color 0.3s ease'
+        backgroundColor={backgroundColor}
+        backdropFilter={scrolled ? "blur(15px)" : "none"}
+        boxShadow={boxShadow}
       >
-        <Text fontSize='25px' fontWeight='bold' color={"gray-200"} ml={8}>
-          <Icon as={FaArrowLeftLong} boxSize={6} color='gray.600' mr={8} />
+        <Text
+          fontSize='25px'
+          fontWeight='bold'
+          color={colorMode === "light" ? "gray.600" : "white"}
+          ml={8}
+        >
+          <Icon
+            as={FaArrowLeftLong}
+            boxSize={6}
+            color={colorMode === "light" ? "gray.600" : "white"}
+            mr={8}
+          />
           Live Scores
         </Text>
         <HStack spacing={10} mr={5} onMouseLeave={handleMouseLeave}>
@@ -88,7 +116,7 @@ const Header = () => {
               <Icon
                 as={FaSearch}
                 boxSize={6}
-                color='gray.600'
+                color={colorMode === "light" ? "gray.600" : "white"}
                 cursor='pointer'
                 transition='0.5s'
                 onMouseEnter={handleMouseEnter}
@@ -102,20 +130,27 @@ const Header = () => {
             <Icon
               as={FaCog}
               boxSize={6}
-              color='gray.600'
+              color={colorMode === "light" ? "gray.600" : "white"}
               _hover={{ color: "red" }}
+            />
+          </Box>
+          <Box onClick={toggleColorMode} display='flex' alignItems='center'>
+            <Icon
+              as={colorMode === "light" ? MdDarkMode : MdLightMode}
+              boxSize={6}
+              color={colorMode === "light" ? "gray.600" : "white"}
             />
           </Box>
           <Icon
             as={FaBell}
             boxSize={6}
-            color='gray.600'
+            color={colorMode === "light" ? "gray.600" : "white"}
             _hover={{ color: "orange" }}
           />
           <Icon
             as={FaUser}
             boxSize={6}
-            color='gray.600'
+            color={colorMode === "light" ? "gray.600" : "white"}
             _hover={{ color: "green" }}
           />
         </HStack>

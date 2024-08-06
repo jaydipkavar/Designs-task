@@ -1,19 +1,32 @@
 /** @format */
 "use client";
+import { useTheme } from "@/app/themes/themescontext";
 import { Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 const NewNextMatch = () => {
+  const { colorMode } = useTheme();
   return (
     <>
-      <Box bg='white' borderRadius='50px' padding={10} mt={5}>
+      <Box
+        bg='transparnt'
+        color={colorMode === "light" ? "black" : "white"}
+        borderRadius='50px'
+        padding={10}
+        mt={5}
+      >
         <Box
           display={"flex"}
           justifyContent={"space-between"}
           alignItems={"center"}
           flexWrap={"wrap"}
         >
-          <Text fontSize='30px' fontWeight='bold' color={"#353E6C"} ml={3}>
+          <Text
+            fontSize='30px'
+            fontWeight='bold'
+            color={colorMode === "light" ? "#353E6C" : "white"}
+            ml={3}
+          >
             Next Match
           </Text>
           <Text fontSize='15px' fontWeight='bold' color={"#BACCFD"} mr={3}>
@@ -27,7 +40,12 @@ const NewNextMatch = () => {
           gap={10}
           mt={6}
         >
-          <Box display={"flex"} mt={2} flexDirection={"column"} alignItems={"center"}>
+          <Box
+            display={"flex"}
+            mt={2}
+            flexDirection={"column"}
+            alignItems={"center"}
+          >
             <Image
               src='/assets/img.svg'
               alt='Naomi O.'
@@ -38,14 +56,11 @@ const NewNextMatch = () => {
             <Text fontSize='25px' fontWeight='bold' mt={5}>
               Naomi O.
             </Text>
-            <Text fontSize='18px'  color={"#A0AEC0"} mt={3}>
+            <Text fontSize='18px' color={"#A0AEC0"} mt={3}>
               Japan
             </Text>
           </Box>
-          <Box
-         mt={-10}
-            color={"#1657FF"}
-          >
+          <Box mt={-10} color={"#1657FF"}>
             <Box
               height={"10px"}
               width={"10px"}
@@ -60,13 +75,17 @@ const NewNextMatch = () => {
               borderRadius={50}
             ></Box>
           </Box>
-          <Box display={"flex"} mt={2} flexDirection={"column"} alignItems={"center"}>
+          <Box
+            display={"flex"}
+            mt={2}
+            flexDirection={"column"}
+            alignItems={"center"}
+          >
             <Image
               src='/assets/img1.svg'
               alt='Anindita R.'
               width={120}
-                          height={120}
-                          
+              height={120}
               loading='eager'
             />
             <Text fontSize='25px' fontWeight='bold' mt={5}>
