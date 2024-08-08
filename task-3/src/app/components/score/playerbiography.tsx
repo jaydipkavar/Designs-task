@@ -4,14 +4,24 @@ import { Box, Text, GridItem } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import NewNextMatch from "./newnextmatch";
+
 import { useTheme } from "@/app/themes/themescontext";
-const PlayerBiography = () => {
+
+interface PlayerBiographyProps {
+  content: any;
+  height?: string;
+}
+
+const PlayerBiography: React.FC<PlayerBiographyProps> = ({
+  content,
+  height,
+}) => {
   const { colorMode } = useTheme();
   return (
     <>
       <GridItem
         colSpan={1}
-        height='auto'
+        height={height}
         bg={colorMode === "light" ? "white" : "gray.800"}
         color={colorMode === "light" ? "black" : "white"}
         borderRadius='50px'
@@ -109,11 +119,7 @@ const PlayerBiography = () => {
             <FaFacebookF className='Facebook' />
           </Box>
         </Box>
-        <Box marginTop={"70PX"} fontSize={15}>
-          {" "}
-          <hr></hr>
-        </Box>
-        <NewNextMatch />
+        {content}
         <Box position={"absolute"} top={0} right={-5}>
           <Image
             src='/assets/woman.svg'

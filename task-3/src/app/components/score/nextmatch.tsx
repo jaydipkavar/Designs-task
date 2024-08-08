@@ -23,7 +23,7 @@ const NextMatch = () => {
               18 January 2024
             </Text>
           </Box>
-          {/* <Box
+          <Box
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
@@ -87,7 +87,7 @@ const NextMatch = () => {
                 Anindita R.
               </Text>
             </Box>
-          </Box> */}
+          </Box>
         </Box>
       </Box>
     </>

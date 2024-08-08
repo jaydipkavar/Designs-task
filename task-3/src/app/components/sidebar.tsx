@@ -25,6 +25,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "../themes/themescontext";
+import { usePathname } from "next/navigation";
 
 interface NavItemProps {
   icon: React.ElementType;
@@ -62,7 +63,8 @@ const NavItem: React.FC<NavItemProps> = ({
 
 const NewSidebar = () => {
   const { colorMode } = useTheme();
-
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
   return (
     <>
       <Flex>
@@ -109,14 +111,19 @@ const NewSidebar = () => {
               </NavItem>
               <NavItem
                 icon={FaChartLine}
-                href='./score'
-                bg={"#E9EFFF"}
-                color={"#1657FF"}
+                href='./score1'
+                bg={isActive("/score1") ? "#E9EFFF" : "transparent"}
+                color={isActive("/score1") ? "#1657FF" : ""}
               >
-                Score
+                Score 1
               </NavItem>
-              <NavItem icon={FaTags} href='#' bg={""} color={""}>
-                Categories
+              <NavItem
+                icon={FaChartLine}
+                href='/score2'
+                bg={isActive("/score2") ? "#E9EFFF" : "transparnt"}
+                color={isActive("/score2") ? "#1657FF" : ""}
+              >
+                Score 2
               </NavItem>
               <NavItem icon={FaVideo} href='#' bg={""} color={""}>
                 Video

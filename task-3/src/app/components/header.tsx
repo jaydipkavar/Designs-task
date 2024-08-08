@@ -15,12 +15,14 @@ import { FaBell, FaCog, FaSearch, FaTimes, FaUser } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useTheme } from "../themes/themescontext";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { colorMode, toggleColorMode } = useTheme();
-
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
   const backgroundColor = scrolled
     ? colorMode === "light"
       ? "rgba(255, 255, 255, 0.6)"
@@ -134,13 +136,17 @@ const Header = () => {
               _hover={{ color: "red" }}
             />
           </Box>
-          <Box onClick={toggleColorMode} display='flex' alignItems='center'>
-            <Icon
-              as={colorMode === "light" ? MdDarkMode : MdLightMode}
-              boxSize={6}
-              color={colorMode === "light" ? "gray.600" : "white"}
-            />
-          </Box>
+          {isActive("/score2") ? (
+            <Box onClick={toggleColorMode} display='flex' alignItems='center'>
+              <Icon
+                as={colorMode === "light" ? MdDarkMode : MdLightMode}
+                boxSize={6}
+                color={colorMode === "light" ? "gray.600" : "white"}
+              />
+            </Box>
+          ) : (
+            <></>
+          )}
           <Icon
             as={FaBell}
             boxSize={6}
