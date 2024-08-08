@@ -18,7 +18,7 @@ const Score2: NextPage = () => {
       <Flex
         direction='column'
         width='100%'
-        bg={colorMode === "light" ? "gray.100" : "gray.700"}
+        bg={colorMode === "light" ? "#F4F5F7" : "gray.700"}
       >
         <Header />
 

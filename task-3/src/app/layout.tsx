@@ -36,7 +36,7 @@ export default function RootLayout({
               >
                 <Sidebar />
               </Box>
-              <Box width='82%' marginLeft='18%'>
+              <Box width='82%' height={"100vh"} marginLeft='18%' bg={"#F4F5F7"}>
                 {children}
               </Box>
             </Flex>
