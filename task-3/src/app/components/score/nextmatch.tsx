@@ -13,24 +13,13 @@ const NextMatch = () => {
             display={"flex"}
             justifyContent={"space-between"}
             alignItems={"center"}
+            flexWrap={"wrap"}
           >
             {" "}
-            <Text
-              fontSize='23px'
-              fontWeight='bold'
-              color={"#353E6C"}
-              ml={3}
-
-            >
+            <Text fontSize='23px' fontWeight='bold' color={"#353E6C"} ml={3}>
               Your Next Match
             </Text>
-            <Text
-              fontSize='15px'
-              fontWeight='bold'
-              color={"#BACCFD"}
-              mr={3}
-
-            >
+            <Text fontSize='15px' fontWeight='bold' color={"#BACCFD"} mr={3}>
               18 January 2024
             </Text>
           </Box>
@@ -50,7 +39,6 @@ const NextMatch = () => {
                 fontWeight='bold'
                 color={"gray-200"}
                 mr={10}
-  
               >
                 Naomi O.
               </Text>
@@ -95,7 +83,6 @@ const NextMatch = () => {
                 fontWeight='bold'
                 color={"gray-200"}
                 ml={10}
-  
               >
                 Anindita R.
               </Text>

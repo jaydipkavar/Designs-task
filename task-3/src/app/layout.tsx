@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ChakraProvider, Box, Flex } from "@chakra-ui/react";
 import Sidebar from "./components/sidebar";
+import { ThemeProvider, useTheme } from "./themes/themescontext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,27 +19,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <ChakraProvider>
-          <Flex>
-            <Box
-              width='18%'
-              position='fixed'
-              top='0'
-              left='0'
-              height='100vh'
-              overflowY='auto'
-              bg='white'
-            >
-              <Sidebar />
-            </Box>
-            <Box width='82%' marginLeft='18%'>
-              {children}
-            </Box>
-          </Flex>
-        </ChakraProvider>
+        <ThemeProvider>
+          <ChakraProvider>
+            <Flex>
+              <Box
+                width='18%'
+                position='fixed'
+                top='0'
+                left='0'
+                height='100vh'
+                overflowY='auto'
+              >
+                <Sidebar />
+              </Box>
+              <Box width='82%' marginLeft='18%'>
+                {children}
+              </Box>
+            </Flex>
+          </ChakraProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

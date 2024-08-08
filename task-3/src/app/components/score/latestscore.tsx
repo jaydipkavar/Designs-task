@@ -98,8 +98,8 @@ const LatestScore = () => (
               <FaRegStar color='orange' fontSize={20} />
             </Box>
           </Box>
-          <Box mt={5} fontSize={18}>
-            <Flex align='center' py={2}>
+          <Box mt={5} fontSize={18} >
+            <Flex align='center' mt={1}>
               <Text flex='1'>Aninduta R. (IDN)</Text>
               <Flex
                 display={"flex"}
@@ -126,7 +126,7 @@ const LatestScore = () => (
                 Win
               </Text>
             </Flex>
-            <Flex align='center' mt={1}>
+            <Flex align='center'  mt={1}>
               <Text flex='1' fontWeight='500'>
                 Naomi O. (JPN)
               </Text>
@@ -143,7 +143,14 @@ const LatestScore = () => (
                 <Spacer w={2} />
                 <Text fontWeight='500'>1</Text>
               </Flex>
-              <Text width={"15%"} textAlign={"center"} borderRadius={10}></Text>
+              <Text
+                color='#FFBB38'
+                bg={"#FFF5D9"}
+                fontWeight='bold'
+                width={"15%"}
+                textAlign={"center"}
+                borderRadius={10}
+              ></Text>
             </Flex>
           </Box>
         </TabPanel>
@@ -156,6 +163,6 @@ const LatestScore = () => (
       </TabPanels>
     </Tabs>
   </GridItem>
-);
+); 
 
 export default LatestScore;
