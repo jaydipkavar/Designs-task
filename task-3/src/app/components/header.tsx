@@ -9,6 +9,7 @@ import {
   InputGroup,
   InputRightElement,
   Text,
+  useDisclosure,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { FaBell, FaCog, FaSearch, FaTimes, FaUser } from "react-icons/fa";
@@ -16,6 +17,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { useTheme } from "../themes/themescontext";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { usePathname } from "next/navigation";
+import DrawerRight from "./score/drawer";
 
 const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -34,6 +36,7 @@ const Header = () => {
       ? "-1px 16px 14px -8px rgba(218, 218, 218, 0.68)"
       : "-1px 16px 14px -8px rgba(0, 0, 0, 0.5)"
     : "none";
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -49,6 +52,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const handleMouseEnter = () => {
     setShowSearch(true);
   };
@@ -57,9 +61,10 @@ const Header = () => {
     setShowSearch(false);
   };
 
+  const { isOpen, onOpen, onClose } = useDisclosure(); // Manage drawer state
+
   return (
     <>
-      {" "}
       <Box
         height='10vh'
         zIndex={2}
@@ -134,9 +139,10 @@ const Header = () => {
               boxSize={6}
               color={colorMode === "light" ? "gray.600" : "white"}
               _hover={{ color: "red" }}
+              onClick={onOpen} // Open the drawer on click
             />
           </Box>
-          {isActive("/score2") ? (
+          {/* {isActive("/score2") ? (
             <Box onClick={toggleColorMode} display='flex' alignItems='center'>
               <Icon
                 as={colorMode === "light" ? MdDarkMode : MdLightMode}
@@ -144,9 +150,7 @@ const Header = () => {
                 color={colorMode === "light" ? "gray.600" : "white"}
               />
             </Box>
-          ) : (
-            <></>
-          )}
+          ) : null} */}
           <Icon
             as={FaBell}
             boxSize={6}
@@ -161,6 +165,8 @@ const Header = () => {
           />
         </HStack>
       </Box>
+      {/* Add DrawerRight component here */}
+      <DrawerRight isOpen={isOpen} onClose={onClose} />
     </>
   );
 };

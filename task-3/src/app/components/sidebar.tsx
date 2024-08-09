@@ -6,19 +6,18 @@ import {
   Flex,
   Box,
   List,
-  ListItem,
   VStack,
   Icon,
   Text,
   HStack,
   Button,
+  ListItem,
 } from "@chakra-ui/react";
 import {
   FaLock,
   FaGamepad,
   FaBroadcastTower,
   FaChartLine,
-  FaTags,
   FaVideo,
   FaChartBar,
 } from "react-icons/fa";
@@ -26,6 +25,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "../themes/themescontext";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 interface NavItemProps {
   icon: React.ElementType;
@@ -35,6 +35,9 @@ interface NavItemProps {
   children: React.ReactNode;
 }
 
+const MotionBox = motion(Box);
+const MotionListItem = motion(ListItem);
+
 const NavItem: React.FC<NavItemProps> = ({
   icon,
   href,
@@ -42,7 +45,7 @@ const NavItem: React.FC<NavItemProps> = ({
   bg,
   children,
 }) => (
-  <ListItem
+  <MotionListItem
     padding='8px 16px'
     _hover={{ backgroundColor: "#E9EFFF", color: "#1657FF" }}
     cursor='pointer'
@@ -51,6 +54,9 @@ const NavItem: React.FC<NavItemProps> = ({
     fontSize={17}
     fontWeight={500}
     borderRadius={10}
+    initial={{ x: -100, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
   >
     <Link href={href}>
       <HStack>
@@ -58,13 +64,14 @@ const NavItem: React.FC<NavItemProps> = ({
         <Text>{children}</Text>
       </HStack>
     </Link>
-  </ListItem>
+  </MotionListItem>
 );
 
 const NewSidebar = () => {
   const { colorMode } = useTheme();
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
+
   return (
     <>
       <Flex>
@@ -78,7 +85,12 @@ const NewSidebar = () => {
           zIndex='docked'
           p={3}
         >
-          <Box padding='5'>
+          <MotionBox
+            padding='5'
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             <Flex alignItems='center' justifyContent='space-between'>
               <Flex alignItems='center'>
                 <Box boxSize='50px' bg='teal.500' borderRadius='full' mr={3}>
@@ -100,14 +112,23 @@ const NewSidebar = () => {
                 </Text>
               </Flex>
             </Flex>
-          </Box>
-          <VStack align='center' spacing={5} p={5}>
+          </MotionBox>
+
+          <MotionBox
+            as={VStack}
+            align='center'
+            spacing={5}
+            p={5}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <List spacing={4} width='100%'>
               <NavItem icon={FaGamepad} href='' bg={""} color={""}>
                 All Games
               </NavItem>
               <NavItem icon={FaBroadcastTower} href='#' bg={""} color={""}>
-                Live Games{" "}
+                Live Games
               </NavItem>
               <NavItem
                 icon={FaChartLine}
@@ -132,13 +153,17 @@ const NewSidebar = () => {
                 Statistic
               </NavItem>
             </List>
-          </VStack>
-          <Box
+          </MotionBox>
+
+          <MotionBox
             flex='1'
             display='flex'
             alignItems='flex-end'
             justifyContent='center'
             padding='4'
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <Box
               flex='1'
@@ -191,7 +216,7 @@ const NewSidebar = () => {
                 Upgrade to Pro
               </Button>
             </Box>
-          </Box>
+          </MotionBox>
         </Flex>
       </Flex>
     </>
