@@ -165,7 +165,7 @@ const Header = () => {
           />
         </HStack>
       </Box>
-      {/* Add DrawerRight component here */}
+
       <DrawerRight isOpen={isOpen} onClose={onClose} />
     </>
   );

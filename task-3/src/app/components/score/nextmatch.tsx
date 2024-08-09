@@ -1,12 +1,18 @@
 /** @format */
 "use client";
+import { useTheme } from "@/app/themes/themescontext";
 import { Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 const NextMatch = () => {
+  const { colorMode } = useTheme();
   return (
     <>
-      <Box bg='white' borderRadius='30px' padding={6}>
+      <Box
+        bg={colorMode === "light" ? "white" : "gray.800"}
+        borderRadius='30px'
+        padding={6}
+      >
         <Box>
           {" "}
           <Box
@@ -16,7 +22,12 @@ const NextMatch = () => {
             flexWrap={"wrap"}
           >
             {" "}
-            <Text fontSize='23px' fontWeight='bold' color={"#353E6C"} ml={3}>
+            <Text
+              fontSize='23px'
+              fontWeight='bold'
+              color={colorMode === "light" ? "#353E6C" : "white"}
+              ml={3}
+            >
               Your Next Match
             </Text>
             <Text fontSize='15px' fontWeight='bold' color={"#BACCFD"} mr={3}>
@@ -37,7 +48,7 @@ const NextMatch = () => {
               <Text
                 fontSize='25px'
                 fontWeight='bold'
-                color={"gray-200"}
+                color={colorMode === "light" ? "gray-200" : "white"}
                 mr={10}
               >
                 Naomi O.
@@ -81,7 +92,7 @@ const NextMatch = () => {
               <Text
                 fontSize='25px'
                 fontWeight='bold'
-                color={"gray-200"}
+                color={colorMode === "light" ? "gray-200" : "white"}
                 ml={10}
               >
                 Anindita R.

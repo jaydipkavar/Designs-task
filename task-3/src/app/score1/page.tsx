@@ -11,17 +11,19 @@ import PlayerBiography from "../components/score/playerbiography";
 import LatestScore from "../components/score/latestscore";
 import Header from "../components/header";
 import Statistic from "../components/score/statistic";
+import { useTheme } from "../themes/themescontext";
 
 const MotionFlex = motion(Flex);
 const MotionText = motion(Text);
 
 const Score1: NextPage = () => {
+  const { colorMode } = useTheme();
   return (
     <>
       <MotionFlex
         direction='column'
         width='100%'
-        bg='#F4F5F7'
+        bg={colorMode === "light" ? "#F4F5F7" : "gray.700"}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -51,7 +53,7 @@ const Score1: NextPage = () => {
             <MotionText
               fontSize='25px'
               fontWeight='bold'
-              color='#353E6C'
+              color={colorMode === "light" ? "#353E6C" : "white"}
               ml={2}
               mt={2}
               mb={3}
@@ -66,7 +68,7 @@ const Score1: NextPage = () => {
             <MotionText
               fontSize='25px'
               fontWeight='bold'
-              color='#353E6C'
+              color={colorMode === "light" ? "#353E6C" : "white"}
               ml={2}
               mt={2}
               mb={3}

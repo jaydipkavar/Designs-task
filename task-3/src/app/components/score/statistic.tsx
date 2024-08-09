@@ -6,11 +6,12 @@ import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useEffect, useRef } from "react";
 import { Chart, ChartType } from "chart.js/auto";
 import { NextPage } from "next";
+import { useTheme } from "@/app/themes/themescontext";
 
 const Statistic: NextPage = () => {
   const chartRef1 = useRef<Chart | null>(null);
   const chartRef2 = useRef<Chart | any>(null);
-
+  const { colorMode } = useTheme();
   useEffect(() => {
     const data = [
       { no: 1, count: 12 },
@@ -64,7 +65,7 @@ const Statistic: NextPage = () => {
               let fontSize = (height / 114).toFixed(2);
               ctx.font = `bold ${fontSize}em sans-serif`;
               ctx.textBaseline = "middle";
-              ctx.fillStyle = "black";
+              ctx.fillStyle = colorMode === "light" ? "black" : "white";
 
               const text1X = Math.round(
                 (width - ctx.measureText(text1).width) / 2
@@ -75,7 +76,10 @@ const Statistic: NextPage = () => {
 
               fontSize = (height / 200).toFixed(2);
               ctx.font = `${fontSize}em sans-serif`;
-              ctx.fillStyle = "rgba(0,0,0,0.2)"; // Light color for 75%
+              ctx.fillStyle =
+                colorMode === "light"
+                  ? "rgb(0,0,0,0.2)"
+                  : "rgb(255,255,255,0.4)";
               const text2X = Math.round(
                 (width - ctx.measureText(text2).width) / 2
               );
@@ -239,13 +243,13 @@ const Statistic: NextPage = () => {
       destroyChart(chartRef1.current);
       destroyChart(chartRef2.current);
     };
-  }, []);
+  }, [colorMode]);
   return (
     <>
       <Flex direction='column' height='auto' gap={4}>
         <Flex direction='row' height='55vh' gap={4}>
           <Box
-            bg='white'
+            bg={colorMode === "light" ? "white" : "gray.800"}
             borderRadius='50px'
             padding={4}
             height='55vh'
@@ -259,6 +263,7 @@ const Statistic: NextPage = () => {
               gap={5}
               fontWeight={600}
               mt={5}
+              color={colorMode === "light" ? "black" : "white"}
             >
               <HiArrowLongLeft />
               2019
@@ -274,7 +279,7 @@ const Statistic: NextPage = () => {
             </Box>
           </Box>
           <Box
-            bg='white'
+            bg={colorMode === "light" ? "white" : "gray.800"}
             borderRadius='50px'
             padding={4}
             height='55vh'
@@ -292,6 +297,7 @@ const Statistic: NextPage = () => {
               gap={5}
               fontWeight={600}
               mt={5}
+              color={colorMode === "light" ? "black" : "white"}
             >
               Global Statistic
             </Text>
